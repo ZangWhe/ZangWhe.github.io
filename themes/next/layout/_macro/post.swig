@@ -257,3 +257,8 @@
   {######################}
   {### END POST BLOCK ###}
   {######################}
+  {% if not is_index and theme.passage_end_tag.enabled %}
+   <div>
+     {% include 'passage-end-tag.swig' %}
+   </div>
+  {% endif %}

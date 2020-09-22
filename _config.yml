@@ -107,3 +107,18 @@ backup:
     type: git
     repository:
        github: git@github.com:TranquilPleasant/TranquilPleasant.github.io.git,backup
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 275
+  suffix: "mins."
+
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
+
