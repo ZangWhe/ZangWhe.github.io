@@ -1200,7 +1200,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8216ff;
+  background: #7a7d17;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2616,11 +2616,4 @@ mjx-container + br {
   .pagination {
     margin: 8px 0 0;
   }
-}
-.post {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
