@@ -29,6 +29,8 @@
           <div class="post-toc motion-element">{{ toc }}</div>
         {%- endif %}
       </div>
+
+
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
@@ -43,8 +45,12 @@
           <span>0%</span>
         </div>
       {%- endif %}
-
+     
     </div>
+    
   </aside>
+
   <div id="sidebar-dimmer"></div>
+  
 {% endmacro %}
+
