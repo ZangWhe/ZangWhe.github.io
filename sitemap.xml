@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zangwhe.github.io/2020/11/05/2020-11-05-kali/</loc>
+    <loc>http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/</loc>
+    
+    <lastmod>2020-11-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/2020/11/05/2020-11-05-Kali/</loc>
     
     <lastmod>2020-11-06</lastmod>
     
@@ -39,6 +46,27 @@
 
   
   <url>
+    <loc>http://zangwhe.github.io/tags/Python/</loc>
+    <lastmod>2020-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/tags/numpy/</loc>
+    <lastmod>2020-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zangwhe.github.io/tags/Kali/</loc>
     <lastmod>2020-11-06</lastmod>
     <changefreq>daily</changefreq>
@@ -53,6 +81,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>http://zangwhe.github.io/categories/Python/</loc>
+    <lastmod>2020-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>http://zangwhe.github.io/categories/Kali/</loc>

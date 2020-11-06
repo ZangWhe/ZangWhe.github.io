@@ -1,1 +1,2 @@
-http://zangwhe.github.io/2020/11/05/2020-11-05-kali/
+http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/
+http://zangwhe.github.io/2020/11/05/2020-11-05-Kali/
