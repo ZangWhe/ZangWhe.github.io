@@ -21,23 +21,29 @@
     var CONFIG = {"hostname":"zangwhe.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="了解什么是NumPy ​    NumPy是Python中科学计算的基本软件包。它是一个Python库，提供多维数组对象，各种派生对象（例如蒙版数组和矩阵）以及各种例程，用于对数组进行快速操作，包括数学，逻辑，形状处理，排序，选择，   I &#x2F; O ，离散傅立叶变换，基本线性代数，基本统计运算，随机模拟等等。">
+  <meta name="description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇  学习目标 了解NumPy中一维数组，二维数组和n维数组之间的区别 了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组 了解n维数组的轴和形状属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python—NumPy学习—Numpy的了解与准备工作">
-<meta property="og:url" content="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/index.html">
+<meta property="og:title" content="Python—NumPy学习—NumPy的快速入门">
+<meta property="og:url" content="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/index.html">
 <meta property="og:site_name" content="北方向北">
-<meta property="og:description" content="了解什么是NumPy ​    NumPy是Python中科学计算的基本软件包。它是一个Python库，提供多维数组对象，各种派生对象（例如蒙版数组和矩阵）以及各种例程，用于对数组进行快速操作，包括数学，逻辑，形状处理，排序，选择，   I &#x2F; O ，离散傅立叶变换，基本线性代数，基本统计运算，随机模拟等等。">
+<meta property="og:description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇  学习目标 了解NumPy中一维数组，二维数组和n维数组之间的区别 了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组 了解n维数组的轴和形状属性">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/660fcfbb056e265019b0c0b02620dd68.png">
-<meta property="article:published_time" content="2020-11-06T10:59:03.000Z">
-<meta property="article:modified_time" content="2020-11-06T12:51:08.485Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/971911b538013d82473498d9c1879cf2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/2343a83a0e291758abfde2fa45aa224b.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b3ae52faedd5790ce7e094ee3887911e.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b2a2d70bdeda36579eab88eacaf75b0a.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/cbc59855fe68040bb6606668480b0c75.png">
+<meta property="article:published_time" content="2020-11-06T12:54:24.000Z">
+<meta property="article:modified_time" content="2020-11-06T15:11:11.619Z">
 <meta property="article:author" content="Wangzz">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="numpy">
+<meta property="article:tag" content="NumPy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/660fcfbb056e265019b0c0b02620dd68.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png">
 
-<link rel="canonical" href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/">
+<link rel="canonical" href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/">
 
 
 <script id="page-configurations">
@@ -50,7 +56,7 @@
   };
 </script>
 
-  <title>Python—NumPy学习—Numpy的了解与准备工作 | 北方向北</title>
+  <title>Python—NumPy学习—NumPy的快速入门 | 北方向北</title>
   
 
 
@@ -180,7 +186,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/">
+    <link itemprop="mainEntityOfPage" href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -193,7 +199,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python—NumPy学习—Numpy的了解与准备工作
+          Python—NumPy学习—NumPy的快速入门
         </h1>
 
         <div class="post-meta">
@@ -205,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-11-06 18:59:03 / 修改时间：20:51:08" itemprop="dateCreated datePublished" datetime="2020-11-06T18:59:03+08:00">2020-11-06</time>
+              <time title="创建时间：2020-11-06 20:54:24 / 修改时间：23:11:11" itemprop="dateCreated datePublished" datetime="2020-11-06T20:54:24+08:00">2020-11-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -218,7 +224,7 @@
             </span>
 
           
-            <span id="/2020/11/06/2020-11-06-Python-Numpy/" class="post-meta-item leancloud_visitors" data-flag-title="Python—NumPy学习—Numpy的了解与准备工作" title="阅读次数">
+            <span id="/2020/11/06/2020-11-06-Python-NumPy-2/" class="post-meta-item leancloud_visitors" data-flag-title="Python—NumPy学习—NumPy的快速入门" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -233,8 +239,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/11/06/2020-11-06-Python-Numpy/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/06/2020-11-06-Python-Numpy/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/11/06/2020-11-06-Python-NumPy-2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/06/2020-11-06-Python-NumPy-2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -244,18 +250,18 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
           
-		  	 <span id="/2020/11/06/2020-11-06-Python-Numpy/"class="leancloud_visitors"  data-flag-title="Python—NumPy学习—Numpy的了解与准备工作">
+		  	 <span id="/2020/11/06/2020-11-06-Python-NumPy-2/"class="leancloud_visitors"  data-flag-title="Python—NumPy学习—NumPy的快速入门">
             &nbsp; | &nbsp; 北方向北
             </span>
 		  
@@ -269,75 +275,136 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="了解什么是NumPy"><a href="#了解什么是NumPy" class="headerlink" title="了解什么是NumPy"></a>了解什么是NumPy</h2><blockquote>
-<p>​    NumPy是Python中科学计算的基本软件包。它是一个Python库，提供多维数组对象，各种派生对象（例如蒙版数组和矩阵）以及各种<a href="https://baike.baidu.com/item/%E4%BE%8B%E7%A8%8B/2390628?fr=aladdin" target="_blank" rel="noopener">例程</a>，用于对数组进行快速操作，包括数学，逻辑，形状处理，排序，选择，   I / O ，离散傅立叶变换，基本线性代数，基本统计运算，随机模拟等等。</p>
-</blockquote>
+        <h2 id="前导"><a href="#前导" class="headerlink" title="前导"></a>前导</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+<li>Python学习，具体参阅<a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener">Python教程</a></li>
+<li>为运行示例，需安装matplotlib库，具体看文章的<a href="http://localhost:4000/2020/11/06/2020-11-06-Python-Numpy-1" target="_blank" rel="noopener">上一篇</a></li>
+</ul>
+<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
+<li>了解NumPy中一维数组，二维数组和n维数组之间的区别</li>
+<li>了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组</li>
+<li>了解n维数组的轴和形状属性</li>
+</ul>
 <a id="more"></a>
 
-
-
-<p>更多信息请自行查询<a href="https://numpy.org/devdocs/user/whatisnumpy.html" target="_blank" rel="noopener">官方文档</a>或百度</p>
 <br>
 
 <hr>
 <br>
 
-<h2 id="NumPy-安装"><a href="#NumPy-安装" class="headerlink" title="NumPy 安装"></a>NumPy 安装</h2><ul>
-<li><p>​    使用已有的发行版本</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h3><blockquote>
+<p>​    NumPy的主要对象是齐次多维数组。它是由非负整数的元组索引的所有类型相同的元素（通常为数字）表。在NumPy中，维度称为<em>轴</em>。</p>
+<p>​    例如：3D空间上的点的坐标[1,2,1]只有一个轴。该轴上有3个元素，所以我们说它的长度为3.</p>
+<p>​    在下图所示的中，数组有2个轴：第一个轴的长度为2，第二个轴的长度为3（可以理解为2行3列的向量）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[1.,0.,0.],</span><br><span class="line">[0.,1.,2.]]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>NumPy的数组类别称为ndarray。也被称为别名array。</p>
+</blockquote>
+<blockquote>
+<p>ndarray对象的重要的属性如下：</p>
+</blockquote>
+<hr>
 <ul>
-<li><a href="https://www.anaconda.com/download/" target="_blank" rel="noopener">Anaconda</a>: 免费 Python 发行版，用于进行大规模数据处理、预测分析，和科学计算，致力于简化包的管理和部署。支持 Linux, Windows 和 Mac 系统。</li>
-<li><a href="https://www.enthought.com/products/canopy" target="_blank" rel="noopener">Enthought Canopy</a>: 提供了免费和商业发行版。持 Linux, Windows 和 Mac 系统。</li>
-<li><a href="https://python-xy.github.io/" target="_blank" rel="noopener">Python(x,y)</a>: 免费的 Python 发行版，包含了完整的 Python 语言开发包 及 <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener">Spyder IDE</a>。支持 Windows，仅限 Python 2 版本。</li>
-<li><a href="https://winpython.github.io/" target="_blank" rel="noopener">WinPython</a>: 另一个免费的 Python 发行版，包含科学计算包与 Spyder IDE。支持 Windows。</li>
-<li><a href="http://www.pyzo.org/" target="_blank" rel="noopener">Pyzo</a>: 基于 Anaconda 的免费发行版本及 IEP 的交互开发环境，超轻量级。 支持 Linux, Windows 和 Mac 系统。</li>
+<li>ndarray.ndim</li>
 </ul>
-</li>
-</ul>
+<p>&emsp;  数组的轴(维度)数</p>
+<hr>
 <ul>
-<li><p>使用pip安装 &emsp;  (numpy常与scipy matplotlib搭配使用)</p>
+<li>ndarray.shape</li>
+</ul>
+<p>&emsp;  数组的维度。这是一个整数元组，指示每个维度中数组的大小。对于具有<em>n</em>行和<em>m</em>列的矩阵，shape将为(n,m)。因此，shape元组的长度就是轴数，ndim</p>
+<hr>
 <ul>
-<li>(国外线路，下载会较慢）</li>
+<li>ndarray.size</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy scipy matplotlib</span><br></pre></td></tr></table></figure>
-
+<p>&emsp;  数组元素的总数。这等于shape元素的乘积</p>
+<hr>
 <ul>
-<li>(清华源下载，速度较快)</li>
+<li>ndarray.dtype</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy scipy matplotlib  -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-</li>
-<li><p>使用conda安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy scipy matplotlib</span><br></pre></td></tr></table></figure>
-
-<p>(conda 命令使用清华源安装请自行百度)</p>
-</li>
-<li><p>Linux下安装</p>
+<p>&emsp;  一个对象，描述数组中元素的类型。可以使用标准Python类型创建或指定dtype。另外，NumPy提供了自己的类型。numpy.int32，numpy.int16和numpy.float64是一些示例。</p>
+<hr>
 <ul>
-<li>Ubuntu &amp; Debain</li>
+<li>ndarray.itemsize</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose</span><br></pre></td></tr></table></figure>
-
+<p>&emsp;  数组中每个元素的大小（以字节为单位）。例如，类型为float64元素的数组具有itemsize 8（= 64/8），而其中类型为complex32中的元素具有itemsize 4（= 32/8）。等同于ndarray.dtype.itemsize。</p>
+<hr>
 <ul>
-<li>CentOS/Fedora</li>
+<li>ndarray.data</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install numpy scipy python-matplotlib ipython python-pandas sympy python-nose atlas-devel</span><br></pre></td></tr></table></figure>
+<p>&emsp;  包含数组实际元素的缓冲区。通常，我们不需要使用此属性，因为我们将使用索引工具访问数组中的元素。</p>
+<hr>
+<p><b>举个栗子</b></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.arange(<span class="number">15</span>).reshape(<span class="number">3</span>,<span class="number">5</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Mac系统</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy scipy matplotlib -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证是否安装成功</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.eye(<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png" style="zoom:67%;margin-left:10px" />
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/660fcfbb056e265019b0c0b02620dd68.png" style="zoom: 80%;margin-left:10px;"/>
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png" style="zoom:67%;margin-left:10px" />
 
-
+<br>
 
 <hr>
+<br>
+
+<h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><ul>
+<li>使用array函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">a</span><br><span class="line">a.dtype</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>常见的出错在于，错误的使用多个参数调用数组，而不是使用单个序列作为参数。例如：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.array(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)       <span class="comment">#错误的</span></span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])		<span class="comment">#正确的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>array将[序列,序列]转换为二维数组，将[序列,序列,序列]转换为三维数组，以此类推…</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)])		<span class="comment">#这是一个二维数组</span></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数组类型可以在创建时明确的指出</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = np.array([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],dtype=complex)		<span class="comment">#指定数组的类型为complex</span></span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Numpy的一些内置函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#zeros()    将指定维度的数组全部置0，默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line">a = np.zeros((<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">print(a)</span><br><span class="line">print(a.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment">#ones()     将指定维度的数组全部置1，默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line">b = np.ones((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),dtype = np.int16)</span><br><span class="line">print(b)</span><br><span class="line">print(b.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment">#empty()     将指定维度的数组初始化为没有特定意义的随机值（内容是随机的并取决于内存状态的数组），默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line"></span><br><span class="line">c = np.empty((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line">print(c.dtype)</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/971911b538013d82473498d9c1879cf2.png" style="zoom:67%;margin-left:10px" />
+
+<ul>
+<li>更多内置函数</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/2343a83a0e291758abfde2fa45aa224b.png" style="zoom: 80%;margin-left:10px" />
+
+
+
+<h3 id="输出数组"><a href="#输出数组" class="headerlink" title="输出数组"></a>输出数组</h3><ul>
+<li><p>简单介绍下输出数组时的规则：</p>
+<ul>
+<li>最后一个轴从左到右打印，</li>
+<li>倒数第二个从上到下打印，</li>
+<li>其余的也从上到下打印，每个切片之间用空行隔开。</li>
+</ul>
+</li>
+<li><p>如果数组太大无法打印，那么Numpy会自动跳过数组的中心部分，仅输出边角点</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(np.arange(<span class="number">10000</span>))</span><br><span class="line"></span><br><span class="line">print(np.arange(<span class="number">10000</span>).reshape(<span class="number">100</span>,<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b3ae52faedd5790ce7e094ee3887911e.png" style="zoom:67%;margin-left:10px" />
+
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b2a2d70bdeda36579eab88eacaf75b0a.png" style="zoom:67%;margin-left:10px" />
+
+<ul>
+<li>要禁用此行为并强制NumPy打印整个数组，可以使用更改打印选项<code>set_printoptions</code>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">np.set_printoptions(threshold=sys.maxsize)       <span class="comment"># 需要导入sys库</span></span><br><span class="line">print(np.arange(<span class="number">10000</span>).reshape(<span class="number">100</span>,<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/cbc59855fe68040bb6606668480b0c75.png" style="zoom:80%;margin-left:10px" />
+
 
     </div>
 
@@ -353,7 +420,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/" title="Python—NumPy学习—Numpy的了解与准备工作">http://zangwhe.github.io/2020/11/06/2020-11-06-Python-Numpy/</a>
+    <a href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/" title="Python—NumPy学习—NumPy的快速入门">http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -365,7 +432,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Python/" rel="tag"># Python</a>
-              <a href="/tags/numpy/" rel="tag"># numpy</a>
+              <a href="/tags/NumPy/" rel="tag"># NumPy</a>
           </div>
 
         
@@ -374,8 +441,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/11/05/2020-11-05-Kali/" rel="prev" title="虚拟机中安装Kali Linux">
-      <i class="fa fa-chevron-left"></i> 虚拟机中安装Kali Linux
+    <a href="/2020/11/06/2020-11-06-Python-Numpy-1/" rel="prev" title="Python—NumPy学习—NumPy的了解与准备工作">
+      <i class="fa fa-chevron-left"></i> Python—NumPy学习—NumPy的了解与准备工作
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -446,7 +513,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解什么是NumPy"><span class="nav-number">1.</span> <span class="nav-text">了解什么是NumPy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy-安装"><span class="nav-number">2.</span> <span class="nav-text">NumPy 安装</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前导"><span class="nav-number">1.</span> <span class="nav-text">前导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-number">1.2.</span> <span class="nav-text">学习目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单介绍"><span class="nav-number">2.1.</span> <span class="nav-text">简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组创建"><span class="nav-number">2.2.</span> <span class="nav-text">数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出数组"><span class="nav-number">2.3.</span> <span class="nav-text">输出数组</span></a></li></ol></li></ol></div>
       </div>
 
 
@@ -464,7 +531,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -477,7 +544,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -546,12 +613,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">5k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">4 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
