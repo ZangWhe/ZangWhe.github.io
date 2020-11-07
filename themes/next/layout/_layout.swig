@@ -60,5 +60,7 @@
   {% if theme.leancloud_visitors.enable %}
   	 {% include '_scripts/lean-analytics.swig' %}
   {%  endif %}
+
+  <script src="/live2d-widget/autoload.js"></script>
 </body>
 </html>

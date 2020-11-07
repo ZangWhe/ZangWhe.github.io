@@ -1014,4 +1014,3 @@ canvas_nest:
   zIndex: -1 # z-index property of the background
   count: 99 # The number of lines
 
-
