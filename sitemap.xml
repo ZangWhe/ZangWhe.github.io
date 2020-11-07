@@ -53,27 +53,6 @@
 
   
   <url>
-    <loc>http://zangwhe.github.io/tags/Python/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zangwhe.github.io/tags/NumPy/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zangwhe.github.io/tags/numpy/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zangwhe.github.io/tags/Kali/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
@@ -87,17 +66,38 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://zangwhe.github.io/categories/Python/</loc>
+    <loc>http://zangwhe.github.io/tags/Python/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
+    <loc>http://zangwhe.github.io/tags/numpy/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/tags/NumPy/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>http://zangwhe.github.io/categories/Kali/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/categories/Python/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
