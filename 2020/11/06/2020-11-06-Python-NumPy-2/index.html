@@ -21,12 +21,12 @@
     var CONFIG = {"hostname":"zangwhe.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇  学习目标 了解NumPy中一维数组，二维数组和n维数组之间的区别 了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组 了解n维数组的轴和形状属性">
+  <meta name="description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python—NumPy学习—NumPy的快速入门">
 <meta property="og:url" content="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/index.html">
 <meta property="og:site_name" content="北方向北">
-<meta property="og:description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇  学习目标 了解NumPy中一维数组，二维数组和n维数组之间的区别 了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组 了解n维数组的轴和形状属性">
+<meta property="og:description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b2a2d70bdeda36579eab88eacaf75b0a.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/cbc59855fe68040bb6606668480b0c75.png">
 <meta property="article:published_time" content="2020-11-06T12:54:24.000Z">
-<meta property="article:modified_time" content="2020-11-06T15:11:11.619Z">
+<meta property="article:modified_time" content="2020-11-07T06:41:06.370Z">
 <meta property="article:author" content="Wangzz">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="NumPy">
@@ -209,10 +209,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-11-06 20:54:24 / 修改时间：23:11:11" itemprop="dateCreated datePublished" datetime="2020-11-06T20:54:24+08:00">2020-11-06</time>
+              <time title="创建时间：2020-11-06 20:54:24" itemprop="dateCreated datePublished" datetime="2020-11-06T20:54:24+08:00">2020-11-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-07 14:41:06" itemprop="dateModified" datetime="2020-11-07T14:41:06+08:00">2020-11-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -279,13 +285,13 @@
 <li>Python学习，具体参阅<a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener">Python教程</a></li>
 <li>为运行示例，需安装matplotlib库，具体看文章的<a href="http://localhost:4000/2020/11/06/2020-11-06-Python-Numpy-1" target="_blank" rel="noopener">上一篇</a></li>
 </ul>
+<a id="more"></a>
+
 <h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
 <li>了解NumPy中一维数组，二维数组和n维数组之间的区别</li>
 <li>了解如何在不使用for循环的情况下将一些线性代数运算应用于n维数组</li>
 <li>了解n维数组的轴和形状属性</li>
 </ul>
-<a id="more"></a>
-
 <br>
 
 <hr>
