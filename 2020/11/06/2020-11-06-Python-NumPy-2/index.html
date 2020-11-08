@@ -21,12 +21,12 @@
     var CONFIG = {"hostname":"zangwhe.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
+  <meta name="description" content="[TOC] 前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python—NumPy学习—NumPy的快速入门">
+<meta property="og:title" content="Python—NumPy学习—NumPy基础">
 <meta property="og:url" content="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/index.html">
 <meta property="og:site_name" content="北方向北">
-<meta property="og:description" content="前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
+<meta property="og:description" content="[TOC] 前导准备 Python学习，具体参阅Python教程 为运行示例，需安装matplotlib库，具体看文章的上一篇">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png">
@@ -138,7 +138,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1c62ebd370d8096df19c00f96977ba16.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5bf74fa2cba6d4bec9218260a854e58c.png">
 <meta property="article:published_time" content="2020-11-06T12:54:24.000Z">
-<meta property="article:modified_time" content="2020-11-07T15:07:20.378Z">
+<meta property="article:modified_time" content="2020-11-08T07:15:40.704Z">
 <meta property="article:author" content="Wangzz">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="NumPy">
@@ -158,7 +158,7 @@
   };
 </script>
 
-  <title>Python—NumPy学习—NumPy的快速入门 | 北方向北</title>
+  <title>Python—NumPy学习—NumPy基础 | 北方向北</title>
   
 
 
@@ -301,7 +301,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python—NumPy学习—NumPy的快速入门
+          Python—NumPy学习—NumPy基础
         </h1>
 
         <div class="post-meta">
@@ -319,7 +319,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-07 23:07:20" itemprop="dateModified" datetime="2020-11-07T23:07:20+08:00">2020-11-07</time>
+                <time title="修改时间：2020-11-08 15:15:40" itemprop="dateModified" datetime="2020-11-08T15:15:40+08:00">2020-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -332,7 +332,7 @@
             </span>
 
           
-            <span id="/2020/11/06/2020-11-06-Python-NumPy-2/" class="post-meta-item leancloud_visitors" data-flag-title="Python—NumPy学习—NumPy的快速入门" title="阅读次数">
+            <span id="/2020/11/06/2020-11-06-Python-NumPy-2/" class="post-meta-item leancloud_visitors" data-flag-title="Python—NumPy学习—NumPy基础" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -358,7 +358,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>12k</span>
+              <span>13k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -369,7 +369,7 @@
             </span>
 
           
-		  	 <span id="/2020/11/06/2020-11-06-Python-NumPy-2/"class="leancloud_visitors"  data-flag-title="Python—NumPy学习—NumPy的快速入门">
+		  	 <span id="/2020/11/06/2020-11-06-Python-NumPy-2/"class="leancloud_visitors"  data-flag-title="Python—NumPy学习—NumPy基础">
             &nbsp; | &nbsp; 北方向北
             </span>
 		  
@@ -383,7 +383,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="前导"><a href="#前导" class="headerlink" title="前导"></a>前导</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+        <p>[TOC]</p>
+<h2 id="前导"><a href="#前导" class="headerlink" title="前导"></a>前导</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
 <li>Python学习，具体参阅<a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener">Python教程</a></li>
 <li>为运行示例，需安装matplotlib库，具体看文章的<a href="http://localhost:4000/2020/11/06/2020-11-06-Python-Numpy-1" target="_blank" rel="noopener">上一篇</a></li>
 </ul>
@@ -407,7 +408,47 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[1.,0.,0.],</span><br><span class="line">[0.,1.,2.]]</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>NumPy的数组类别称为ndarray。也被称为别名array。</p>
+<p>NumPy的数组类别称为ndarray。</p>
+<p>ndarray 对象是用于存放同类型元素的多维数组。</p>
+<p>ndarray 中的每个元素在内存中都有相同存储大小的区域。</p>
+</blockquote>
+<blockquote>
+<p>创建一个ndarray只需调用Numpy的array函数即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.array(object, dtype = <span class="literal">None</span>, copy = <span class="literal">True</span>, order = <span class="literal">None</span>, subok = <span class="literal">False</span>, ndmin = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">object</td>
+<td align="left">数组或嵌套的数列</td>
+</tr>
+<tr>
+<td align="left">dtype</td>
+<td align="left">数组元素的数据类型，可选</td>
+</tr>
+<tr>
+<td align="left">copy</td>
+<td align="left">对象是否需要复制，可选</td>
+</tr>
+<tr>
+<td align="left">order</td>
+<td align="left">创建数组的样式，C为行方向，F为列方向，A为任意方向（默认）</td>
+</tr>
+<tr>
+<td align="left">subok</td>
+<td align="left">默认返回一个与基类类型一致的数组</td>
+</tr>
+<tr>
+<td align="left">ndmin</td>
+<td align="left">指定生成数组的最小维度</td>
+</tr>
+</tbody></table>
 </blockquote>
 <blockquote>
 <p>ndarray对象的重要的属性如下：</p>
@@ -897,12 +938,16 @@
 <hr>
 <br>
 
-<h2 id="复制和视图"><a href="#复制和视图" class="headerlink" title="复制和视图"></a>复制和视图</h2><blockquote>
-<p>在操作和操作数组时，有时会将其数据复制到新数组中，有时不复制。</p>
-<p>对于初学者来说，这通常会引起混乱。</p>
-<p>有以下三种情况:完全没有复制、浅复制、深复制</p>
+<h2 id="副本和视图"><a href="#副本和视图" class="headerlink" title="副本和视图"></a>副本和视图</h2><blockquote>
+<p>​    副本是一个数据的完整的拷贝，如果我们对副本进行修改，它不会影响到原始数据，物理内存不在同一位置。</p>
+<p>​    视图是数据的一个别称或引用，通过该别称或引用亦便可访问、操作原有数据，但原有数据不会产生拷贝。如果我们对视图进行修改，它会影响到原始数据，物理内存在同一位置。</p>
 </blockquote>
-<h3 id="完全没有复制"><a href="#完全没有复制" class="headerlink" title="完全没有复制"></a>完全没有复制</h3><blockquote>
+<blockquote>
+<p>在操作数组时，有时会将其数据复制到新数组中，有时不复制。</p>
+<p>对于初学者来说，这通常会引起混乱。</p>
+<p>有以下三种情况:无复制、视图或浅复制、副本或深复制</p>
+</blockquote>
+<h3 id="无复制"><a href="#无复制" class="headerlink" title="无复制"></a>无复制</h3><blockquote>
 <p>简单分配不会复制对象或其数据</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[ <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>,  <span class="number">3</span>],</span><br><span class="line">              [ <span class="number">4</span>,  <span class="number">5</span>,  <span class="number">6</span>,  <span class="number">7</span>],</span><br><span class="line">              [ <span class="number">8</span>,  <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>]])</span><br><span class="line"></span><br><span class="line">b = a        <span class="comment">#没有创建新的对象</span></span><br><span class="line">b <span class="keyword">is</span> a       <span class="comment">#简单理解为a,b都指向了同一片区域，a、b只是ndarray对象的两个不同名字而已</span></span><br></pre></td></tr></table></figure>
@@ -921,7 +966,7 @@
 <img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5a4c05fc972b618b984ddf5753facd44.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
-<h3 id="浅复制"><a href="#浅复制" class="headerlink" title="浅复制"></a>浅复制</h3><blockquote>
+<h3 id="视图或浅复制"><a href="#视图或浅复制" class="headerlink" title="视图或浅复制"></a>视图或浅复制</h3><blockquote>
 <p>不同的数组对象可以共享相同的数据。<code>view</code>方法创建一个具有相同数据的新数组对象。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a = np.array([[ 0,  1,  2,  3],</span></span><br><span class="line"><span class="comment">#               [ 4,  5,  6,  7],</span></span><br><span class="line"><span class="comment">#               [ 8,  9, 10, 11]])</span></span><br><span class="line">c = a.view()</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
@@ -949,7 +994,7 @@
 <img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1d0afd1dc2cd44f62d159468876d5251.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
-<h3 id="深度复制"><a href="#深度复制" class="headerlink" title="深度复制"></a>深度复制</h3><blockquote>
+<h3 id="副本或深复制"><a href="#副本或深复制" class="headerlink" title="副本或深复制"></a>副本或深复制</h3><blockquote>
 <p>copy方法对数组及其数据进行完整复制</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d = a.copy()            <span class="comment">#相当于新建了一个带有新数据的新数组</span></span><br><span class="line">print(d <span class="keyword">is</span> a)</span><br><span class="line">print(d.base <span class="keyword">is</span> a)      <span class="comment"># d与a不共享任何事情 </span></span><br><span class="line">d[<span class="number">0</span>,<span class="number">0</span>]=<span class="number">99999</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
@@ -1231,7 +1276,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/" title="Python—NumPy学习—NumPy的快速入门">http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/</a>
+    <a href="http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/" title="Python—NumPy学习—NumPy基础">http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -1324,7 +1369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前导"><span class="nav-number">1.</span> <span class="nav-text">前导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-number">1.2.</span> <span class="nav-text">学习目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单介绍"><span class="nav-number">2.1.</span> <span class="nav-text">简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组创建"><span class="nav-number">2.2.</span> <span class="nav-text">数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出数组"><span class="nav-number">2.3.</span> <span class="nav-text">输出数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本运算"><span class="nav-number">2.4.</span> <span class="nav-text">基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通用函数"><span class="nav-number">2.5.</span> <span class="nav-text">通用函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引，切片和迭代"><span class="nav-number">2.6.</span> <span class="nav-text">索引，切片和迭代</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操纵形状"><span class="nav-number">3.</span> <span class="nav-text">操纵形状</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改变数组的形状"><span class="nav-number">3.1.</span> <span class="nav-text">改变数组的形状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆叠在一起的不同数组"><span class="nav-number">3.2.</span> <span class="nav-text">堆叠在一起的不同数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将一个数组拆分为几个较小的数组"><span class="nav-number">3.3.</span> <span class="nav-text">将一个数组拆分为几个较小的数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制和视图"><span class="nav-number">4.</span> <span class="nav-text">复制和视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#完全没有复制"><span class="nav-number">4.1.</span> <span class="nav-text">完全没有复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浅复制"><span class="nav-number">4.2.</span> <span class="nav-text">浅复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度复制"><span class="nav-number">4.3.</span> <span class="nav-text">深度复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数和方法概述"><span class="nav-number">4.4.</span> <span class="nav-text">函数和方法概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不太基础"><span class="nav-number">5.</span> <span class="nav-text">不太基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#广播规则"><span class="nav-number">5.1.</span> <span class="nav-text">广播规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级索引和索引技巧"><span class="nav-number">6.</span> <span class="nav-text">高级索引和索引技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用索引数组建立索引"><span class="nav-number">6.1.</span> <span class="nav-text">用索引数组建立索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用布尔数组建立索引"><span class="nav-number">6.2.</span> <span class="nav-text">用布尔数组建立索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ix-函数"><span class="nav-number">6.3.</span> <span class="nav-text">ix_()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用字符串索引"><span class="nav-number">6.4.</span> <span class="nav-text">用字符串索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性代数"><span class="nav-number">7.</span> <span class="nav-text">线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的数组操作"><span class="nav-number">7.1.</span> <span class="nav-text">简单的数组操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧与窍门"><span class="nav-number">8.</span> <span class="nav-text">技巧与窍门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#”自动“重塑"><span class="nav-number">8.1.</span> <span class="nav-text">”自动“重塑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量堆叠"><span class="nav-number">8.2.</span> <span class="nav-text">向量堆叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直方图"><span class="nav-number">8.3.</span> <span class="nav-text">直方图</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前导"><span class="nav-number">1.</span> <span class="nav-text">前导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-number">1.2.</span> <span class="nav-text">学习目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单介绍"><span class="nav-number">2.1.</span> <span class="nav-text">简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组创建"><span class="nav-number">2.2.</span> <span class="nav-text">数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出数组"><span class="nav-number">2.3.</span> <span class="nav-text">输出数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本运算"><span class="nav-number">2.4.</span> <span class="nav-text">基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通用函数"><span class="nav-number">2.5.</span> <span class="nav-text">通用函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引，切片和迭代"><span class="nav-number">2.6.</span> <span class="nav-text">索引，切片和迭代</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操纵形状"><span class="nav-number">3.</span> <span class="nav-text">操纵形状</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改变数组的形状"><span class="nav-number">3.1.</span> <span class="nav-text">改变数组的形状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆叠在一起的不同数组"><span class="nav-number">3.2.</span> <span class="nav-text">堆叠在一起的不同数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将一个数组拆分为几个较小的数组"><span class="nav-number">3.3.</span> <span class="nav-text">将一个数组拆分为几个较小的数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#副本和视图"><span class="nav-number">4.</span> <span class="nav-text">副本和视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无复制"><span class="nav-number">4.1.</span> <span class="nav-text">无复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图或浅复制"><span class="nav-number">4.2.</span> <span class="nav-text">视图或浅复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#副本或深复制"><span class="nav-number">4.3.</span> <span class="nav-text">副本或深复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数和方法概述"><span class="nav-number">4.4.</span> <span class="nav-text">函数和方法概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不太基础"><span class="nav-number">5.</span> <span class="nav-text">不太基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#广播规则"><span class="nav-number">5.1.</span> <span class="nav-text">广播规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级索引和索引技巧"><span class="nav-number">6.</span> <span class="nav-text">高级索引和索引技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用索引数组建立索引"><span class="nav-number">6.1.</span> <span class="nav-text">用索引数组建立索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用布尔数组建立索引"><span class="nav-number">6.2.</span> <span class="nav-text">用布尔数组建立索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ix-函数"><span class="nav-number">6.3.</span> <span class="nav-text">ix_()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用字符串索引"><span class="nav-number">6.4.</span> <span class="nav-text">用字符串索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性代数"><span class="nav-number">7.</span> <span class="nav-text">线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的数组操作"><span class="nav-number">7.1.</span> <span class="nav-text">简单的数组操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧与窍门"><span class="nav-number">8.</span> <span class="nav-text">技巧与窍门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#”自动“重塑"><span class="nav-number">8.1.</span> <span class="nav-text">”自动“重塑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量堆叠"><span class="nav-number">8.2.</span> <span class="nav-text">向量堆叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直方图"><span class="nav-number">8.3.</span> <span class="nav-text">直方图</span></a></li></ol></li></ol></div>
       </div>
 
 

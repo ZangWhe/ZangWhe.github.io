@@ -4,7 +4,7 @@
   <url>
     <loc>http://zangwhe.github.io/2020/11/06/2020-11-06-Python-NumPy-2/</loc>
     
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     
   </url>
   
@@ -46,7 +46,7 @@
 
   <url>
     <loc>http://zangwhe.github.io/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -54,35 +54,35 @@
   
   <url>
     <loc>http://zangwhe.github.io/tags/Kali/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://zangwhe.github.io/tags/Tool/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://zangwhe.github.io/tags/Python/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zangwhe.github.io/tags/numpy/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://zangwhe.github.io/tags/NumPy/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/tags/numpy/</loc>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -91,14 +91,14 @@
   
   <url>
     <loc>http://zangwhe.github.io/categories/Kali/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://zangwhe.github.io/categories/Python/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
