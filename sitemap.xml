@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zangwhe.github.io/abblink.html</loc>
+    <loc>http://zangwhe.github.io/62063.html</loc>
     
     <lastmod>2020-11-09</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zangwhe.github.io/abblink.html</loc>
+    <loc>http://zangwhe.github.io/59885.html</loc>
     
-    <lastmod>2020-11-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zangwhe.github.io/abblink.html</loc>
-    
-    <lastmod>2020-11-08</lastmod>
+    <lastmod>2020-11-09</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zangwhe.github.io/abblink.html</loc>
+    <loc>http://zangwhe.github.io/46594.html</loc>
     
-    <lastmod>2020-11-08</lastmod>
+    <lastmod>2020-11-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zangwhe.github.io/38267.html</loc>
+    
+    <lastmod>2020-11-09</lastmod>
     
   </url>
   
@@ -74,6 +74,13 @@
   </url>
   
   <url>
+    <loc>http://zangwhe.github.io/tags/Pandas/</loc>
+    <lastmod>2020-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zangwhe.github.io/tags/Kali/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -82,13 +89,6 @@
   
   <url>
     <loc>http://zangwhe.github.io/tags/Tool/</loc>
-    <lastmod>2020-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zangwhe.github.io/tags/Pandas/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
