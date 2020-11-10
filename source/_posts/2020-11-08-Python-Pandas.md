@@ -1,5 +1,5 @@
 ---
-title: Python-Pandas全基础
+title: Python-Pandas基础
 tags:
   - Python
   - Pandas
