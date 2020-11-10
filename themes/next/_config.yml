@@ -40,10 +40,14 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.ico
-  medium: /images/favicon-32x32-next.ico
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  #small: /images/favicon-16x16-next.ico
+  small: https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/20d45627f1c3002aac15680fdf93640c.png
+  #medium: /images/favicon-32x32-next.ico
+  medium: https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png
+  #apple_touch_icon: /images/apple-touch-icon-next.png
+  apple_touch_icon: https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png
+  #safari_pinned_tab: /images/logo.svg
+  safari_pinned_tab: https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -163,7 +167,8 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/avatar.png
+  #url: /images/avatar.png
+  url: https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
