@@ -1,10 +1,11 @@
 ---
 title: Python—NumPy学习—NumPy的了解与准备工作
-date: 2020-11-06 18:59:03
 tags:
-	- Python
-	- numpy
+  - Python
+  - NumPy
 categories: Python
+abbrlink: 46594
+date: 2020-11-06 18:59:03
 ---
 
 
