@@ -211,7 +211,7 @@ links:
   #Title: http://yoursite.com
   PluShine: https://plushine.cn
   ZLT: https://www.iamzlt.com
-  い醉梦ジ红尘: https://zghya.github.io
+  い醉梦ジ红尘: https://zghya.cn
   亲切的沙果: http://www.iamdqy.cn
 
 # Table of Contents in the Sidebar
@@ -487,7 +487,7 @@ yandex_site_verification:
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification: code-ZU9SfYqU9e
+baidu_site_verification: code-4QswtKCLwA
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
 baidu_push: true
@@ -689,6 +689,7 @@ google_analytics:
 
 # Baidu Analytics
 baidu_analytics: AxiJGZhPJb77kgs2 # <app_id>
+
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
