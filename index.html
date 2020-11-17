@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="北方向北">
 <meta property="og:description" content="世上还赞颂沉默吗不够爆炸">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="WangZzz">
+<meta property="article:author" content="WangzzZ">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://zangwhe.github.io/">
@@ -177,7 +177,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-      <meta itemprop="name" content="WangZzz">
+      <meta itemprop="name" content="WangzzZ">
       <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
     </span>
 
@@ -197,10 +197,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-11-15 11:38:16 / 修改时间：17:16:53" itemprop="dateCreated datePublished" datetime="2020-11-15T11:38:16+08:00">2020-11-15</time>
+              <time title="创建时间：2020-11-15 11:38:16" itemprop="dateCreated datePublished" datetime="2020-11-15T11:38:16+08:00">2020-11-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-17 16:40:09" itemprop="dateModified" datetime="2020-11-17T16:40:09+08:00">2020-11-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -261,250 +267,14 @@
       
           <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>Matplotlib:Python可视化</strong></p>
 <p>&emsp;Matplotlib是一个综合库，用于在Python中创建静态，动画和交互式可视化。</p>
-<br>
-
-<hr>
-<br>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>安装官方发行版</p>
-</blockquote>
-<p>&emsp;Matplotlib及其依赖项可用于macOS, Windows和Linux发行版的轮包:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -U pip</span><br><span class="line">python -m pip install -U matplotlib</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;如果此命令导致从源代码编译Matplotlib，并且编译出现问题，则可以添加<code>--prefer-binary</code>以选择最新版本的Matplotlib，对于该版本，您的OS和Python已预编译了。</p>
-<hr>
-<blockquote>
-<p>安装第三方发行版</p>
-</blockquote>
-<p><strong>科学的Python发行版</strong></p>
-<p>&emsp;<a href="https://www.anaconda.com/" target="_blank" rel="noopener">Anaconda</a>和<a href="https://www.activestate.com/activepython/downloads" target="_blank" rel="noopener">ActiveState</a>是Windows，macOS和常见Linux平台的出色选择。<a href="https://winpython.github.io/" target="_blank" rel="noopener">WinPython</a>是Windows用户的选项。所有这些发行版都包括Matplotlib和<em>许多</em>其他有用的（数据）科学工具。</p>
-<p><strong>Linux:使用包管理器</strong></p>
-<p>&emsp;如果您使用的是Linux，您可能更喜欢使用包管理器。Matplotlib几乎适用于所有主要的Linux发行版。</p>
-<ul>
-<li>Debian / Ubuntu: <code>sudo apt-get install python3-matplotlib</code></li>
-<li>Fedora: <code>sudo dnf install python3-matplotlib</code></li>
-<li>Red Hat: <code>sudo yum install python3-matplotlib</code></li>
-<li>Arch: <code>sudo pacman -S python-matplotlib</code></li>
-</ul>
-<br>
-
-<hr>
-<br>
-
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np     <span class="comment">#matplotlib常与numpy库搭配使用</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在这里举个简单的例子：</p>
-</blockquote>
-<p>&emsp;用坐标轴创建图形最简单的方法是使用<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>pyplot.subplots</code></a>。我们可以用 <a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" target="_blank" rel="noopener"><code>Axes.plot</code></a>绘制坐标轴上的一些数据:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig,ax = plt.subplots()       <span class="comment">#创建一个包含单个坐标轴的图形。</span></span><br><span class="line">ax.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">3</span>])  <span class="comment">#在坐标轴上绘制一些数据</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7384d398ec67aafa2de878a4c7ff9413.png" style="zoom:80%;margin-left:10px" />
-
-<h3 id="Figure的组成"><a href="#Figure的组成" class="headerlink" title="Figure的组成"></a>Figure的组成</h3><img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7297f12faa0667f3706318353082da47.png" style="zoom:80%;margin-left:10px" />
-
-<br>
-
-<hr>
-<br>
-
-<h2 id="Pyplot教程"><a href="#Pyplot教程" class="headerlink" title="Pyplot教程"></a>Pyplot教程</h2><h3 id="pyplot简介"><a href="#pyplot简介" class="headerlink" title="pyplot简介"></a>pyplot简介</h3><p><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" target="_blank" rel="noopener"><code>matplotlib.pyplot</code></a>是使matplotlib像MATLAB一样工作的函数的集合。每个<code>pyplot</code>功能都会对图形进行一些更改：例如，创建图形，在图形中创建绘图区域，在绘图区域中绘制一些线条，用标签装饰绘图等。</p>
-<blockquote>
-<p>使用pyplot生成可视化的效果非常快：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">plt.ylabel(<span class="string">'num'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7de3260fe8f8ea7e78c0e32906e6d4d5.png" style="zoom:80%;margin-left:10px" />
-
-<p>关于上面这个示例中，x轴范围0-3,y轴范围1-4,原因是如果你向Plot传递单个列表或数组，那么matplotlib假定它是y轴的序列，并自动为你生成从0开始的x值</p>
-<hr>
-<h3 id="格式化plot的样式"><a href="#格式化plot的样式" class="headerlink" title="格式化plot的样式"></a>格式化plot的样式</h3><blockquote>
-<p>对于每对x，y参数，都有一个可选的第三个参数，它是表示图的颜色和线型的格式字符串。格式字符串的字母和符号来自MATLAB，您将颜色字符串与线型字符串连接在一起。默认格式字符串是“ b-”，这是一条蓝色实线。</p>
-</blockquote>
-<p>例如，要用红色圆圈绘制以上内容：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>],<span class="string">'ro'</span>) <span class="comment">#'r':red,'o':点</span></span><br><span class="line">plt.axis([<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">20</span>])                <span class="comment">#确定坐标轴的范围，x轴0-6，y轴0-20</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/db2a3f7ecb19275e460762ead8cffa7d.png" style="zoom:80%;margin-left:10px" />
-
-<blockquote>
-<p>格式字符串由颜色，标记物和线条组成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt &#x3D; &#39;[marker][line][color]&#39;  #其他组合也是允许的，例如[color][marker][line]</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p><strong>每一个参数都是可选的。</strong></p>
-</blockquote>
-<blockquote>
-<p>Markers(标记物)</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;.&#39;</code></td>
-<td>点标记</td>
-</tr>
-<tr>
-<td><code>&#39;,&#39;</code></td>
-<td>像素标记</td>
-</tr>
-<tr>
-<td><code>&#39;o&#39;</code></td>
-<td>圆圈标记</td>
-</tr>
-<tr>
-<td><code>&#39;v&#39;</code></td>
-<td>triangle_down标记</td>
-</tr>
-<tr>
-<td><code>&#39;^&#39;</code></td>
-<td>三角形标记</td>
-</tr>
-<tr>
-<td><code>&#39;&lt;&#39;</code></td>
-<td>triangle_left标记</td>
-</tr>
-<tr>
-<td><code>&#39;&gt;&#39;</code></td>
-<td>triangle_right标记</td>
-</tr>
-<tr>
-<td><code>&#39;1&#39;</code></td>
-<td>tri_down标记</td>
-</tr>
-<tr>
-<td><code>&#39;2&#39;</code></td>
-<td>tri_up标记</td>
-</tr>
-<tr>
-<td><code>&#39;3&#39;</code></td>
-<td>tri_left标记</td>
-</tr>
-<tr>
-<td><code>&#39;4&#39;</code></td>
-<td>tri_right标记</td>
-</tr>
-<tr>
-<td><code>&#39;s&#39;</code></td>
-<td>方形标记</td>
-</tr>
-<tr>
-<td><code>&#39;p&#39;</code></td>
-<td>五边形标记</td>
-</tr>
-<tr>
-<td><code>&#39;*&#39;</code></td>
-<td>星标</td>
-</tr>
-<tr>
-<td><code>&#39;h&#39;</code></td>
-<td>六角形标记</td>
-</tr>
-<tr>
-<td><code>&#39;H&#39;</code></td>
-<td>六角标记</td>
-</tr>
-<tr>
-<td><code>&#39;+&#39;</code></td>
-<td>加号</td>
-</tr>
-<tr>
-<td><code>&#39;x&#39;</code></td>
-<td>X标记</td>
-</tr>
-<tr>
-<td><code>&#39;D&#39;</code></td>
-<td>钻石笔</td>
-</tr>
-<tr>
-<td><code>&#39;d&#39;</code></td>
-<td>thin_diamond标记</td>
-</tr>
-<tr>
-<td>`’</td>
-<td>‘`</td>
-</tr>
-<tr>
-<td><code>&#39;_&#39;</code></td>
-<td>标记线</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>line(线形)</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;-&#39;</code></td>
-<td>实线样式</td>
-</tr>
-<tr>
-<td><code>&#39;--&#39;</code></td>
-<td>虚线样式</td>
-</tr>
-<tr>
-<td><code>&#39;-.&#39;</code></td>
-<td>点划线样式</td>
-</tr>
-<tr>
-<td><code>&#39;:&#39;</code></td>
-<td>虚线样式</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>color(颜色)</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>颜色</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;b&#39;</code></td>
-<td>蓝色</td>
-</tr>
-<tr>
-<td><code>&#39;g&#39;</code></td>
-<td>绿色</td>
-</tr>
-<tr>
-<td><code>&#39;r&#39;</code></td>
-<td>红</td>
-</tr>
-<tr>
-<td><code>&#39;c&#39;</code></td>
-<td>青色</td>
-</tr>
-<tr>
-<td><code>&#39;m&#39;</code></td>
-<td>品红</td>
-</tr>
-<tr>
-<td><code>&#39;y&#39;</code></td>
-<td>黄色</td>
-</tr>
-<tr>
-<td><code>&#39;k&#39;</code></td>
-<td>黑色</td>
-</tr>
-<tr>
-<td><code>&#39;w&#39;</code></td>
-<td>白色</td>
-</tr>
-</tbody></table>
-<p>如何参数中只有颜色这一选择项，则可以使用任何<a href="https://matplotlib.org/api/colors_api.html#module-matplotlib.colors" target="_blank" rel="noopener"><code>matplotlib.colors</code></a>规格，例如全名（‘green’)或十六进制表示(‘#008000’)</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/28977.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -528,7 +298,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-      <meta itemprop="name" content="WangZzz">
+      <meta itemprop="name" content="WangzzZ">
       <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
     </span>
 
@@ -648,7 +418,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-      <meta itemprop="name" content="WangZzz">
+      <meta itemprop="name" content="WangzzZ">
       <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
     </span>
 
@@ -770,7 +540,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-      <meta itemprop="name" content="WangZzz">
+      <meta itemprop="name" content="WangzzZ">
       <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
     </span>
 
@@ -897,7 +667,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-      <meta itemprop="name" content="WangZzz">
+      <meta itemprop="name" content="WangzzZ">
       <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
     </span>
 
@@ -1071,9 +841,9 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="WangZzz"
+    <img class="site-author-image" itemprop="image" alt="WangzzZ"
       src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
-  <p class="site-author-name" itemprop="name">WangZzz</p>
+  <p class="site-author-name" itemprop="name">WangzzZ</p>
   <div class="site-description" itemprop="description">世上还赞颂沉默吗<br>不够爆炸</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -1161,7 +931,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">WangZzz</span>
+  <span class="author" itemprop="copyrightHolder">WangzzZ</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
