@@ -1,5 +1,5 @@
 ---
-title: Python—NumPy的了解与准备工作
+title: Python-NumPy的了解与准备工作
 tags:
   - Python
   - NumPy

@@ -1,5 +1,5 @@
 ---
-title: Python—NumPy基础
+title: Python-NumPy基础
 tags:
   - Python
   - NumPy
