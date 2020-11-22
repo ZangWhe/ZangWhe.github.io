@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zangwhe.cn/41087.html</loc>
+    
+    <lastmod>2020-11-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zangwhe.cn/28977.html</loc>
     
     <lastmod>2020-11-20</lastmod>
@@ -60,7 +67,7 @@
 
   <url>
     <loc>https://zangwhe.cn/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,42 +75,42 @@
   
   <url>
     <loc>https://zangwhe.cn/tags/Python/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zangwhe.cn/tags/NumPy/</loc>
-    <lastmod>2020-11-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/tags/Matplotlib/</loc>
-    <lastmod>2020-11-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/tags/Kali/</loc>
-    <lastmod>2020-11-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/tags/Tool/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zangwhe.cn/tags/Pandas/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/tags/Kali/</loc>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/tags/Tool/</loc>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/tags/Matplotlib/</loc>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,14 +119,14 @@
   
   <url>
     <loc>https://zangwhe.cn/categories/Python/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zangwhe.cn/categories/Kali/</loc>
-    <lastmod>2020-11-20</lastmod>
+    <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
