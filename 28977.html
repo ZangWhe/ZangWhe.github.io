@@ -18,7 +18,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zangwhe.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zangwhe.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#4169E1","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="概述Matplotlib:Python可视化 &amp;emsp;Matplotlib是一个综合库，用于在Python中创建静态，动画和交互式可视化。">
@@ -329,9 +329,9 @@
 <p>&emsp;用坐标轴创建图形最简单的方法是使用<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>pyplot.subplots</code></a>。我们可以用 <a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" target="_blank" rel="noopener"><code>Axes.plot</code></a>绘制坐标轴上的一些数据:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig,ax = plt.subplots()       <span class="comment">#创建一个包含单个坐标轴的图形。</span></span><br><span class="line">ax.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">3</span>])  <span class="comment">#在坐标轴上绘制一些数据</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7384d398ec67aafa2de878a4c7ff9413.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7384d398ec67aafa2de878a4c7ff9413.png" style="zoom:80%;margin-left:10px" />
 
-<h4 id="Figure的组成"><a href="#Figure的组成" class="headerlink" title="Figure的组成"></a>Figure的组成</h4><img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7297f12faa0667f3706318353082da47.png" style="zoom:80%;margin-left:10px" />
+<h4 id="Figure的组成"><a href="#Figure的组成" class="headerlink" title="Figure的组成"></a>Figure的组成</h4><img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7297f12faa0667f3706318353082da47.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -344,7 +344,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">plt.ylabel(<span class="string">'num'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7de3260fe8f8ea7e78c0e32906e6d4d5.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/7de3260fe8f8ea7e78c0e32906e6d4d5.png" style="zoom:80%;margin-left:10px" />
 
 <p>关于上面这个示例中，x轴范围0-3,y轴范围1-4,原因是如果你向Plot传递单个列表或数组，那么matplotlib假定它是y轴的序列，并自动为你生成从0开始的x值</p>
 <hr>
@@ -354,7 +354,7 @@
 <p>例如，要用红色圆圈绘制以上内容：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>],<span class="string">'ro'</span>) <span class="comment">#'r':red,'o':点</span></span><br><span class="line">plt.axis([<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">20</span>])                <span class="comment">#确定坐标轴的范围，x轴0-6，y轴0-20</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/db2a3f7ecb19275e460762ead8cffa7d.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/15/db2a3f7ecb19275e460762ead8cffa7d.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>格式字符串由颜色，标记物和线条组成</p>
@@ -537,19 +537,19 @@
 <h4 id="处理多个图形和轴"><a href="#处理多个图形和轴" class="headerlink" title="处理多个图形和轴"></a>处理多个图形和轴</h4><p>在下面这个例子中一个figure下创建了两个子图：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(t)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.exp(-t) * np.cos(<span class="number">2</span>*np.pi*t)</span><br><span class="line"></span><br><span class="line">t1 = np.arange(<span class="number">0.0</span>, <span class="number">5.0</span>, <span class="number">0.1</span>)</span><br><span class="line">t2 = np.arange(<span class="number">0.0</span>, <span class="number">5.0</span>, <span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.subplot(<span class="number">211</span>)  <span class="comment">#211:   2行1列的第一个子图</span></span><br><span class="line">plt.plot(t1, f(t1), <span class="string">'bo'</span>, t2, f(t2), <span class="string">'k'</span>)   <span class="comment">#在其一子图上绘制了两个图形</span></span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">212</span>)   <span class="comment">#212:   2行1列的第二个子图</span></span><br><span class="line">plt.plot(t2, np.cos(<span class="number">2</span>*np.pi*t2), <span class="string">'r--'</span>)   </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/17/32e0260e251fb0ddf0e72d5ba651fd2b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/17/32e0260e251fb0ddf0e72d5ba651fd2b.png" style="zoom:80%;margin-left:10px" />
 
 <p>同样：可以创建多个figure</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(<span class="number">1</span>)                <span class="comment"># 第一个图形</span></span><br><span class="line">plt.subplot(<span class="number">211</span>)             <span class="comment"># 第一个图形中的第一个子图</span></span><br><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">plt.subplot(<span class="number">212</span>)             <span class="comment"># 第一个图形中的第二个子图</span></span><br><span class="line">plt.plot([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.figure(<span class="number">2</span>)                <span class="comment"># 第二个图形</span></span><br><span class="line">plt.plot([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])          <span class="comment"># 默认创建一个 subplot(111)</span></span><br><span class="line"></span><br><span class="line">plt.figure(<span class="number">1</span>)             <span class="comment"># 此时figure(1)仍然存在，并且此时subplot(212)是figure(1)当前使用</span></span><br><span class="line">plt.subplot(<span class="number">211</span>)          <span class="comment"># 使得subplot(211)是figure（1）当前使用</span></span><br><span class="line">plt.title(<span class="string">'Easy as 1, 2, 3'</span>) <span class="comment"># 声明subplot(211)的标题</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/17/74788e34b8c8f82e96ad774108a9e433.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/17/74788e34b8c8f82e96ad774108a9e433.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h4 id="为图形添加文字说明"><a href="#为图形添加文字说明" class="headerlink" title="为图形添加文字说明"></a>为图形添加文字说明</h4><p><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" target="_blank" rel="noopener"><code>annotate</code></a>方法提供了注释方式</p>
 <p><strong>参数</strong>：xy表示注释的位置，xytext是文本的位置。这两个参数都是(x,y)元组</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.subplot(<span class="number">111</span>)</span><br><span class="line"></span><br><span class="line">t = np.arange(<span class="number">0.0</span>, <span class="number">5.0</span>, <span class="number">0.01</span>)</span><br><span class="line">s = np.cos(<span class="number">2</span>*np.pi*t)</span><br><span class="line">line, = plt.plot(t, s, lw=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">plt.annotate(<span class="string">'local max'</span>, xy=(<span class="number">2</span>, <span class="number">1</span>), xytext=(<span class="number">3</span>, <span class="number">1.5</span>),</span><br><span class="line">             arrowprops=dict(facecolor=<span class="string">'black'</span>, shrink=<span class="number">0.05</span>),</span><br><span class="line">             )</span><br><span class="line"></span><br><span class="line">plt.ylim(<span class="number">-2</span>, <span class="number">2</span>)		<span class="comment">#规定y值范围(-2,2)</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/19ab7b6707f8b7acd6dce6401fc2750c.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/19ab7b6707f8b7acd6dce6401fc2750c.png" style="zoom:80%;margin-left:10px" />
 
 <p>更多详细注释请参见官方文档<a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial" target="_blank" rel="noopener">基本注释</a>和<a href="https://matplotlib.org/tutorials/text/annotations.html#plotting-guide-annotation" target="_blank" rel="noopener">高级注释</a>。</p>
 <br>
@@ -561,12 +561,12 @@
 
 <hr>
 <h4 id="将图像数据导入到NumPy数组"><a href="#将图像数据导入到NumPy数组" class="headerlink" title="将图像数据导入到NumPy数组"></a>将图像数据导入到NumPy数组</h4><p>这是我们要处理的图片：</p>
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/eca78bc2a4cd3044e704e56767078adf.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/eca78bc2a4cd3044e704e56767078adf.png" style="zoom:80%;margin-left:10px" />
 
 <p>让我们打开并输出它：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">img = mpimg.imread(<span class="string">'C:\\Users\\wangz\\Desktop\\Pic.png'</span>) <span class="comment">#图片路径</span></span><br><span class="line">print(img)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/b92eba8f96442abb65015ae5862c0264.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/b92eba8f96442abb65015ae5862c0264.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h4 id="将NumPy数组绘制成图像"><a href="#将NumPy数组绘制成图像" class="headerlink" title="将NumPy数组绘制成图像"></a>将NumPy数组绘制成图像</h4><blockquote>
@@ -574,7 +574,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imgplot = plt.imshow(img)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d876abea0674df9600ae45f3e725bf76.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d876abea0674df9600ae45f3e725bf76.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>伪彩色应用于图像</p>
@@ -583,40 +583,40 @@
 <p>伪彩色仅与单通道，灰度，发光度图像有关。我们目前有一个RGB图像。由于R，G和B都是相似的（请参见上方或数据中的内容），我们可以选择一个数据通道：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lum_img = img[:,:,<span class="number">0</span>]   <span class="comment">#数组切片，更多相关切片请看个人博客关于NumPy学习</span></span><br><span class="line">plt.imshow(lum_img)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/f81bafc9654111311ebc0f39d0108936.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/f81bafc9654111311ebc0f39d0108936.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>同样，对于亮度图像，将应用默认的颜色图（又名查找表：LUT）。默认名称为viridis,也有其他可供选择:</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(lum_img,cmap=<span class="string">"hot"</span>)    <span class="comment">#暖色调显示</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="C:%5CUsers%5Cwangz%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201120212946492.png" alt="image-20201120212946492"></p>
+<p><img data-src="C:%5CUsers%5Cwangz%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201120212946492.png" alt="image-20201120212946492"></p>
 <blockquote>
 <p>您还可以使用<a href="https://matplotlib.org/api/cm_api.html#matplotlib.cm.ScalarMappable.set_cmap" target="_blank" rel="noopener"><code>set_cmap()</code></a>方法更改现有打印对象上的颜色图</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imgplot = plt.imshow(lum_img)</span><br><span class="line">imgplot.set_cmap(<span class="string">'nipy_spectral'</span>)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d14d93979e5c002dede7d045f745d30b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d14d93979e5c002dede7d045f745d30b.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>可以通过添加颜色条来了解颜色代表什么价值，可通过matplotlib.pyplot.colorbar()函数实现</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imgplot = plt.imshow(lum_img)</span><br><span class="line">plt.colorbar()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/dfdb2bb41d08ec8de061672881d7630f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/dfdb2bb41d08ec8de061672881d7630f.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>如果你想增强图像的对比度，或扩大特定区域的对比度，同时牺牲颜色变化不大或无关紧要的细节。直方图是个好工具。要创建图像数据的直方图，我们使用<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist" target="_blank" rel="noopener"><code>hist()</code></a>函数。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(lum_img.ravel(),bins=<span class="number">256</span>,range=(<span class="number">0.0</span>,<span class="number">1.0</span>),fc=<span class="string">'k'</span>,ec=<span class="string">'k'</span>)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/add5f57e923c19a1ee1d71fafbfa2daa.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/add5f57e923c19a1ee1d71fafbfa2daa.png" style="zoom:80%;margin-left:10px" />
 
 <p>在获取图像的主要的区域[0.0，0.7]后 (如直方图所示)，</p>
 <p>我们可以通过传递<strong>clim参数</strong>或者调用<strong>set_clim()</strong>方法修改图像对比度</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imgplot = plt.imshow(lum_img,clim=(<span class="number">0.0</span>,<span class="number">0.7</span>))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d3cf83c9688e336ab13dd9ce35dd1d44.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/20/d3cf83c9688e336ab13dd9ce35dd1d44.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -838,15 +838,17 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
+
+
 
 
         
@@ -864,6 +866,7 @@
   
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

@@ -18,7 +18,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zangwhe.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zangwhe.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#4169E1","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="前导准备 NumPy的安装准备工作在上篇文章中，点此跳转  Python学习，具体参阅Python教程  为运行示例，需安装matplotlib库，具体看文章的上一篇">
@@ -479,9 +479,9 @@
 <p><b>举个栗子</b></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.arange(<span class="number">15</span>).reshape(<span class="number">3</span>,<span class="number">5</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png" style="zoom:67%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/a542edd1a2cdf03f20ecd10221403853.png" style="zoom:67%;margin-left:10px" />
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png" style="zoom:67%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/558401f8295c1e629c1e594a95627737.png" style="zoom:67%;margin-left:10px" />
 
 <br>
 
@@ -513,7 +513,7 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#zeros()    将指定维度的数组全部置0，默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line">a = np.zeros((<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">print(a)</span><br><span class="line">print(a.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment">#ones()     将指定维度的数组全部置1，默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line">b = np.ones((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),dtype = np.int16)</span><br><span class="line">print(b)</span><br><span class="line">print(b.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment">#empty()     将指定维度的数组初始化为没有特定意义的随机值（内容是随机的并取决于内存状态的数组），默认数据类型为float64,可以设置参数改变类型</span></span><br><span class="line"></span><br><span class="line">c = np.empty((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">print(c)</span><br><span class="line">print(c.dtype)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/971911b538013d82473498d9c1879cf2.png" style="zoom:67%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/971911b538013d82473498d9c1879cf2.png" style="zoom:67%;margin-left:10px" />
 
 <ul>
 <li>更多内置函数</li>
@@ -540,16 +540,16 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(np.arange(<span class="number">10000</span>))</span><br><span class="line"></span><br><span class="line">print(np.arange(<span class="number">10000</span>).reshape(<span class="number">100</span>,<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b3ae52faedd5790ce7e094ee3887911e.png" style="zoom:67%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b3ae52faedd5790ce7e094ee3887911e.png" style="zoom:67%;margin-left:10px" />
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b2a2d70bdeda36579eab88eacaf75b0a.png" style="zoom:67%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/b2a2d70bdeda36579eab88eacaf75b0a.png" style="zoom:67%;margin-left:10px" />
 
 <ul>
 <li>要禁用此行为并强制NumPy打印整个数组，可以使用更改打印选项<code>set_printoptions</code>。</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">np.set_printoptions(threshold=sys.maxsize)       <span class="comment"># 需要导入sys库</span></span><br><span class="line">print(np.arange(<span class="number">10000</span>).reshape(<span class="number">100</span>,<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/cbc59855fe68040bb6606668480b0c75.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/06/cbc59855fe68040bb6606668480b0c75.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -562,19 +562,19 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>])</span><br><span class="line"></span><br><span class="line">b = np.arange(<span class="number">4</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/db3935a40f93455d6e2cd269f25c0f87.png" style="zoom: 80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/db3935a40f93455d6e2cd269f25c0f87.png" style="zoom: 80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = a - b</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4f8bbd06fabba5f25ce337035624c8b3.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4f8bbd06fabba5f25ce337035624c8b3.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>*np.sin(a)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/585e9c7f57c3cdf04409277756f4fc27.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/585e9c7f57c3cdf04409277756f4fc27.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&lt;<span class="number">35</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/91de52e58a9b1877c8eda6e6bc95d656.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/91de52e58a9b1877c8eda6e6bc95d656.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <blockquote>
@@ -585,15 +585,15 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A*B</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/343061de563e938f62d9fcca8bffb351.png" style="zoom: 80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/343061de563e938f62d9fcca8bffb351.png" style="zoom: 80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A@B</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3971d4064549d5314abf173bafba4d83.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3971d4064549d5314abf173bafba4d83.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A.dot(B)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/67a5858aae02ea9438a91887f6b8a009.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/67a5858aae02ea9438a91887f6b8a009.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <blockquote>
@@ -601,15 +601,15 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rg = np.random.default_rng(<span class="number">1</span>)     <span class="comment"># 创建默认的随机数生成的示例</span></span><br><span class="line">a = np.ones((<span class="number">2</span>,<span class="number">3</span>), dtype=int)     <span class="comment"># Int类型的全1向量</span></span><br><span class="line">b = rg.random((<span class="number">2</span>,<span class="number">3</span>))              <span class="comment">#  默认为浮点数</span></span><br><span class="line">a *= <span class="number">3</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/516ff0af648025713ea836af2ad01c4a.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/516ff0af648025713ea836af2ad01c4a.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b += a</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b821f22eeac6db5334b69c0701fd6b9d.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b821f22eeac6db5334b69c0701fd6b9d.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a += b        <span class="comment">#浮点类型数组b不会自动转换为整型</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/78d0b526cce977042378983a39fce759.png" style="zoom:80%;" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/78d0b526cce977042378983a39fce759.png" style="zoom:80%;" />
 
 <blockquote>
 <p>当使用不同类型的数组进行操作时，结果数组的类型对应于更通用或更精确的数组（一种称为向上转换的行为）。</p>
@@ -622,19 +622,19 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = rg.random((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8a6df5eb3fef72f08cde5d3b97a5c851.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8a6df5eb3fef72f08cde5d3b97a5c851.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.sum()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/efaeaf7840f47275e1e3abcc08177723.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/efaeaf7840f47275e1e3abcc08177723.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.min()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/0562bd71b184abf88966277f227a4062.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/0562bd71b184abf88966277f227a4062.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.max()</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fd88d8a177dc2d643944647a171b0c14.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fd88d8a177dc2d643944647a171b0c14.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <blockquote>
@@ -642,19 +642,19 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/65b63ee93d1e8dcd0409020b72628a1f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/65b63ee93d1e8dcd0409020b72628a1f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.sum(axis=<span class="number">0</span>)      <span class="comment">#求每一列的和</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/755b37dab87ba9c4253472aade23a4cf.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/755b37dab87ba9c4253472aade23a4cf.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.min(axis=<span class="number">1</span>)      <span class="comment">#求每一行的最小值</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/87eb1b5ba3305fd101cd6c82e44f33b8.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/87eb1b5ba3305fd101cd6c82e44f33b8.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.cumsum(axis=<span class="number">1</span>)      <span class="comment">#每一行的累积和</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8f0da952857e812f34fd53188cc7033b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8f0da952857e812f34fd53188cc7033b.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -666,19 +666,19 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">B = np.arange(<span class="number">3</span>)</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/803deb50a6102fa542033a3f28ef041a.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/803deb50a6102fa542033a3f28ef041a.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.exp(B)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3aa764ff8c3a0ed75fdf1204def3c2ba.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3aa764ff8c3a0ed75fdf1204def3c2ba.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.sqrt(B)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/907c3f34707eafa4f1487ca09be1d46f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/907c3f34707eafa4f1487ca09be1d46f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C = np.array([<span class="number">2.</span>,<span class="number">-1.</span>,<span class="number">4.</span>])</span><br><span class="line">np.add(B,C)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/21703f05154f963ac7c3eaa9b80002b8.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/21703f05154f963ac7c3eaa9b80002b8.png" style="zoom:80%;margin-left:10px" />
 
 
 
@@ -696,53 +696,53 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#索引</span></span><br><span class="line">a = np.arange(<span class="number">10</span>)**<span class="number">3</span>         <span class="comment">#幂运算</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6a09b37ce2cb47f175ce32bbb0b80a11.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6a09b37ce2cb47f175ce32bbb0b80a11.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切片</span></span><br><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]      <span class="comment">#区间为[2,5)  ,  左闭右开</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b730edb7ecf808a1408048323cc87855.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b730edb7ecf808a1408048323cc87855.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切片</span></span><br><span class="line"><span class="comment">#array[pos1:pos2:step] = val  指从pos1到pos2-1，没隔两个元素设置为val</span></span><br><span class="line"><span class="comment">#例如：</span></span><br><span class="line"><span class="comment">#  a</span></span><br><span class="line"><span class="comment"># array([  0,   1,   8,  27,  64, 125, 216, 343, 512, 729], dtype=int32)</span></span><br><span class="line">a[:<span class="number">6</span>:<span class="number">2</span>] = <span class="number">1000</span>              <span class="comment">#相当于a[0:6:2]    区间[0,6)     左闭右开</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5bf4888a2666c55389dcddf6ebbd6ead.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5bf4888a2666c55389dcddf6ebbd6ead.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[::<span class="number">-1</span>]         <span class="comment">#逆转数组</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/79dd38a84e95a9bf2f97c3b702a9845f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/79dd38a84e95a9bf2f97c3b702a9845f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#遍历迭代</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    print(i**<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/444fd38b8965664143f1d043a318ddda.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/444fd38b8965664143f1d043a318ddda.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>多维数组每个轴可以有一个索引。这些索引以元组给出，并用逗号分割</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">10</span>*x+y</span><br><span class="line">b = np.fromfunction(f,(<span class="number">5</span>,<span class="number">4</span>),dtype=int)     <span class="comment">#调用f函数，生成5行4列的数组，参数是数组的下标，类型为Int</span></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4183eafbaa704890018f8f10e5b3a0d7.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4183eafbaa704890018f8f10e5b3a0d7.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/31c4199dc9b0883ece4363d75190fe12.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/31c4199dc9b0883ece4363d75190fe12.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">0</span>:<span class="number">5</span>,<span class="number">1</span>]        <span class="comment">#每行的下标为1的值</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/061bb8da4750dabdf1b6e32a2993c4f4.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/061bb8da4750dabdf1b6e32a2993c4f4.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[:,<span class="number">1</span>]          <span class="comment">#等效与上面这个案例</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/197cd332025f9996743ffbb5f82a9c14.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/197cd332025f9996743ffbb5f82a9c14.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">1</span>:<span class="number">3</span>,:]        <span class="comment">#输出第2行和第三行的每一列</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2381952b534226d5b6fcfcfbedbb81ac.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2381952b534226d5b6fcfcfbedbb81ac.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>如果提供的索引数少于轴数，则丢失的索引数将视为完整切片<code>:</code></p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">-1</span>]            <span class="comment">#未指明列的分片情况，则视为每一列，等效于b[-1,:]</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6ad08b5358d235027b36a911650a3a7b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6ad08b5358d235027b36a911650a3a7b.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>括号中的表达式b[i]被视为i 后跟:表示所需数量的剩余轴实例。</p>
@@ -757,29 +757,29 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c = np.array( [[[  <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>],               <span class="comment"># 三维数组</span></span><br><span class="line">                [ <span class="number">10</span>, <span class="number">12</span>, <span class="number">13</span>]],</span><br><span class="line">                [[<span class="number">100</span>,<span class="number">101</span>,<span class="number">102</span>],</span><br><span class="line">                 [<span class="number">110</span>,<span class="number">112</span>,<span class="number">113</span>]]])</span><br><span class="line">c.shape</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b0920364a02391f4632c46f6b4496a50.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b0920364a02391f4632c46f6b4496a50.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[<span class="number">1</span>,...]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/95cfd942c5bb0255e75ce8516e8c5219.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/95cfd942c5bb0255e75ce8516e8c5219.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[...,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5344d3fd679837641253593efee1137e.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5344d3fd679837641253593efee1137e.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>迭代过多维数组相对于第一轴线完成</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># array([[ 0,  1,  2,  3],</span></span><br><span class="line"><span class="comment">#        [10, 11, 12, 13],</span></span><br><span class="line"><span class="comment">#        [20, 21, 22, 23],</span></span><br><span class="line"><span class="comment">#        [30, 31, 32, 33],</span></span><br><span class="line"><span class="comment">#        [40, 41, 42, 43]])</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> b:</span><br><span class="line">    print(row)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7c6edd2253bc5349d2b6114314927cd9.png" style="margin-left: 10px;" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7c6edd2253bc5349d2b6114314927cd9.png" style="margin-left: 10px;" />
 
 <blockquote>
 <p>但是，如果要对数组中的每个元素执行操作，则可以使用<code>flat</code>属性，该属性是 数组中所有元素的 <a href="https://docs.python.org/tutorial/classes.html#iterators" target="_blank" rel="noopener">迭代器</a>：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> b.flat:</span><br><span class="line">    print(element)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/70099fd7f54d4e2c1ac3f7f26d6e07ba.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/70099fd7f54d4e2c1ac3f7f26d6e07ba.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -791,7 +791,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.floor(<span class="number">10</span>*rg.random((<span class="number">3</span>,<span class="number">4</span>)))       <span class="comment">#np.floor 是将浮点数向下取整</span></span><br><span class="line">print(a)</span><br><span class="line">print(a.shape,a.dtype)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6ffc8e3031d27030bb178049b71544e4.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6ffc8e3031d27030bb178049b71544e4.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>数组的形状可以使用各种命令来更改。</p>
@@ -799,29 +799,29 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.ravel()			<span class="comment">#返回一个一维数组</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/262123547e78674f584763db174db621.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/262123547e78674f584763db174db621.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.reshape(<span class="number">6</span>,<span class="number">2</span>)        <span class="comment">#改变数组a为6行2列</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/162ff7a441e98370639204e7dfd67580.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/162ff7a441e98370639204e7dfd67580.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.T     <span class="comment">#a的转置</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/44053a91c9f2710a848d3b779811b256.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/44053a91c9f2710a848d3b779811b256.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.resize.html#numpy.ndarray.resize" target="_blank" rel="noopener"><code>ndarray.resize</code></a>方法修改了数组本身：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#a修改前：</span></span><br><span class="line"><span class="comment">#array([[9., 7., 5., 2.],</span></span><br><span class="line"><span class="comment">#       [1., 9., 5., 1.],</span></span><br><span class="line"><span class="comment">#       [6., 7., 6., 9.]])</span></span><br><span class="line">a.resize((<span class="number">2</span>,<span class="number">6</span>))</span><br><span class="line">a</span><br><span class="line"><span class="comment">#a修改后：</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1767ff1b687f12efc9145f56235c1922.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1767ff1b687f12efc9145f56235c1922.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>如果在改变形状时将维度改为-1，则会自动计算其他尺寸：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.reshape(<span class="number">3</span>,<span class="number">-1</span>)      <span class="comment">#指定转换为3行，系统自动计算列数</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/739c516495e44d0b896f9ff7977ce347.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/739c516495e44d0b896f9ff7977ce347.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>更多函数：</p>
@@ -833,15 +833,15 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = np.floor(<span class="number">10</span>*rg.random((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line">print(<span class="string">'a='</span>,<span class="string">'\n'</span>,a)</span><br><span class="line">b = np.floor(<span class="number">10</span>*rg.random((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line">print(<span class="string">'b='</span>,<span class="string">'\n'</span>,b)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/91cb0e1a10dfba3c60aeea349b26cdfc.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/91cb0e1a10dfba3c60aeea349b26cdfc.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vstack((a,b))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/769aad475ee9a5cc9d29b850d1902cb4.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/769aad475ee9a5cc9d29b850d1902cb4.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.hstack((a,b))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3993710b53facabb2878c2a7bfc90c98.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3993710b53facabb2878c2a7bfc90c98.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>函数column_stack将1维数组作为列向量堆叠成2维数组</p>
@@ -849,27 +849,27 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> newaxis</span><br><span class="line">np.column_stack((a,b))			<span class="comment">#结果等效于上个案例中np.hstack((a,b))</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5fd9d502b50bdcd24370dd50966872e2.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5fd9d502b50bdcd24370dd50966872e2.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">4.</span>,<span class="number">2.</span>])</span><br><span class="line">b = np.array([<span class="number">3.</span>,<span class="number">8.</span>])</span><br><span class="line">print(np.column_stack((a,b)),<span class="string">'\n'</span>)</span><br><span class="line">print(np.hstack((a,b)))               <span class="comment">#两并不相同</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6341dee82ba4c3e8b2e144b01e88bff1.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6341dee82ba4c3e8b2e144b01e88bff1.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[:,newaxis]         <span class="comment">#将a视为一个二维数组，newaxis字面意思就是新的轴</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6cd334fc142debce12d23dbef11d29de.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/6cd334fc142debce12d23dbef11d29de.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">c[:,:,newaxis]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7b3b95dd93885b8281aefc513ba6ed2f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7b3b95dd93885b8281aefc513ba6ed2f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.column_stack((a[:,newaxis],b[:,newaxis]))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/900a99f3761a4d3352addebbd5f2d5f0.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/900a99f3761a4d3352addebbd5f2d5f0.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.hstack((a[:,newaxis],b[:,newaxis]))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/214a034ca229213f661939af882a8b2d.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/214a034ca229213f661939af882a8b2d.png" style="zoom:80%;margin-left:10px" />
 
 
 
@@ -879,18 +879,18 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(np.column_stack <span class="keyword">is</span> np.hstack)</span><br><span class="line">print(np.row_stack <span class="keyword">is</span> np.vstack)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/df0c18e3ad87169f1e36a53ca4817932.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/df0c18e3ad87169f1e36a53ca4817932.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>通常，对于二维以上（不包括二维）的数组，hstack沿着他们的第二个轴堆叠，vstack沿着他们的第一个轴堆叠</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]],[[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]])</span><br><span class="line">b = np.array([[[<span class="number">9</span>,<span class="number">10</span>],[<span class="number">11</span>,<span class="number">12</span>]],[[<span class="number">13</span>,<span class="number">14</span>],[<span class="number">15</span>,<span class="number">16</span>]]])</span><br><span class="line">print(a.shape)</span><br><span class="line">print(np.hstack((a,b)).shape)</span><br><span class="line">np.hstack((a,b))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/25bcd2fe7ef7621b1f7ad8d63232af4b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/25bcd2fe7ef7621b1f7ad8d63232af4b.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]],[[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]])</span><br><span class="line">b = np.array([[[<span class="number">9</span>,<span class="number">10</span>],[<span class="number">11</span>,<span class="number">12</span>]],[[<span class="number">13</span>,<span class="number">14</span>],[<span class="number">15</span>,<span class="number">16</span>]]])</span><br><span class="line">print(a.shape)</span><br><span class="line">print(np.vstack((a,b)).shape)</span><br><span class="line">np.vstack((a,b))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c4ad8e4fc784ab7a2640cae912c387d1.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c4ad8e4fc784ab7a2640cae912c387d1.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>注意<br>在复杂情况下，r_ 和 c_ 杜宇通过一个轴将数字叠加创建数组时很有用。</p>
@@ -898,11 +898,11 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.r_[<span class="number">1</span>:<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a8836a2ed1ff752d6205e153fda94d9f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a8836a2ed1ff752d6205e153fda94d9f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.c_[np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]), np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/45621ae059174b4d8a0def016dd80212.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/45621ae059174b4d8a0def016dd80212.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>​    当使用数组作为参数时，r_和c_在默认行为上类似于vstack和hstack，但是允许一个可选参数给出要连接的轴的编号。</p>
@@ -918,15 +918,15 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.floor(<span class="number">10</span>*rg.random((<span class="number">2</span>,<span class="number">12</span>)))</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2ceb31c38db0192e1fe45a8e1c32bde8.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2ceb31c38db0192e1fe45a8e1c32bde8.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.hsplit(a,<span class="number">3</span>)        <span class="comment">#一分为三</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fcb1596c2ed0b48fbf0184c24f3df9c0.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fcb1596c2ed0b48fbf0184c24f3df9c0.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.hsplit(a,(<span class="number">3</span>,<span class="number">4</span>))      <span class="comment">#分别在第三列和第四列后分离</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7292f59501c9dd0b7d7ad1c78b4a0361.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7292f59501c9dd0b7d7ad1c78b4a0361.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>vsplit沿着垂直的轴拆分分</p>
@@ -951,18 +951,18 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[ <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>,  <span class="number">3</span>],</span><br><span class="line">              [ <span class="number">4</span>,  <span class="number">5</span>,  <span class="number">6</span>,  <span class="number">7</span>],</span><br><span class="line">              [ <span class="number">8</span>,  <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>]])</span><br><span class="line"></span><br><span class="line">b = a        <span class="comment">#没有创建新的对象</span></span><br><span class="line">b <span class="keyword">is</span> a       <span class="comment">#简单理解为a,b都指向了同一片区域，a、b只是ndarray对象的两个不同名字而已</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/36c66acb94653e78a2edecfb51037d2e.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/36c66acb94653e78a2edecfb51037d2e.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>Python将可变对象作为引用传递，因此函数调用不会复制。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    print(id(x))</span><br><span class="line">id(a)               <span class="comment">#id是一个对象的唯一的标识符</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b09ac3e2993da9d38c8146ef52917d20.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/b09ac3e2993da9d38c8146ef52917d20.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(a)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5a4c05fc972b618b984ddf5753facd44.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5a4c05fc972b618b984ddf5753facd44.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h3 id="视图或浅复制"><a href="#视图或浅复制" class="headerlink" title="视图或浅复制"></a>视图或浅复制</h3><blockquote>
@@ -970,27 +970,27 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a = np.array([[ 0,  1,  2,  3],</span></span><br><span class="line"><span class="comment">#               [ 4,  5,  6,  7],</span></span><br><span class="line"><span class="comment">#               [ 8,  9, 10, 11]])</span></span><br><span class="line">c = a.view()</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d0a6521ba9ce7318b9aa6eefd2285cbb.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d0a6521ba9ce7318b9aa6eefd2285cbb.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c <span class="keyword">is</span> a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/0a301503c603565f81e2f1a9966171b9.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/0a301503c603565f81e2f1a9966171b9.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.base <span class="keyword">is</span> a       <span class="comment">#c与a具有相同的视图</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fc5c11812e37a11eb34f665557cf59e9.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/fc5c11812e37a11eb34f665557cf59e9.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = c.reshape((<span class="number">2</span>,<span class="number">6</span>))</span><br><span class="line">a.shape                      <span class="comment">#修改c的形状并不能改变a</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c2fc87fd9e4a3b8dafa7cce924917dc8.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c2fc87fd9e4a3b8dafa7cce924917dc8.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c[<span class="number">0</span>,<span class="number">4</span>] = <span class="number">1024</span></span><br><span class="line">a                   <span class="comment">#修改c中的某个值可以修改a</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8a399918bae41a6dd4cafa5a24d94d7e.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8a399918bae41a6dd4cafa5a24d94d7e.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = a[ : ,<span class="number">1</span>:<span class="number">3</span>]      </span><br><span class="line">s[:] = <span class="number">10</span>         <span class="comment">#s[:]是s对象的view,s与s[:]有区别，请注意</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1d0afd1dc2cd44f62d159468876d5251.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1d0afd1dc2cd44f62d159468876d5251.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h3 id="副本或深复制"><a href="#副本或深复制" class="headerlink" title="副本或深复制"></a>副本或深复制</h3><blockquote>
@@ -998,7 +998,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d = a.copy()            <span class="comment">#相当于新建了一个带有新数据的新数组</span></span><br><span class="line">print(d <span class="keyword">is</span> a)</span><br><span class="line">print(d.base <span class="keyword">is</span> a)      <span class="comment"># d与a不共享任何事情 </span></span><br><span class="line">d[<span class="number">0</span>,<span class="number">0</span>]=<span class="number">99999</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/992536b54cd59e1fb6950b2477fa4f0b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/992536b54cd59e1fb6950b2477fa4f0b.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>如果不再需要原始数组，有时应该在切片后调用复制。</p>
@@ -1057,11 +1057,11 @@
 </blockquote>
 <h3 id="用索引数组建立索引"><a href="#用索引数组建立索引" class="headerlink" title="用索引数组建立索引"></a>用索引数组建立索引</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)**<span class="number">2</span>        </span><br><span class="line">i = np.array([<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">5</span>])      <span class="comment">#下标数组</span></span><br><span class="line">a[i]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2c3f44f71188e7bcb0351e26f82dda7c.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/2c3f44f71188e7bcb0351e26f82dda7c.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">j = np.array([[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">7</span>,<span class="number">9</span>]])		<span class="comment">#二维索引</span></span><br><span class="line">a[j]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3f656f52cd13bc2004a74e8a14be6233.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3f656f52cd13bc2004a74e8a14be6233.png" style="zoom:80%;margin-left:10px" />
 
 
 
@@ -1071,40 +1071,40 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> palette = np.array([[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],         <span class="comment"># black</span></span><br><span class="line">                     [<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>],       <span class="comment"># red</span></span><br><span class="line">                     [<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>],       <span class="comment"># green</span></span><br><span class="line">                     [<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>],       <span class="comment"># blue</span></span><br><span class="line">                     [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>]])  <span class="comment"># white</span></span><br><span class="line"> image = np.array([[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>],        <span class="comment"># 每一个值都对应着palette中的一个颜色</span></span><br><span class="line">                   [<span class="number">0</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">0</span>]])       </span><br><span class="line"><span class="comment"># 例如:0-black,1-red,2-green,3-blue,4-white</span></span><br><span class="line"><span class="comment">#image中的第一行[0, 1, 2,0],对应着palette中的四行</span></span><br><span class="line"><span class="comment">#        [  0,   0,   0],</span></span><br><span class="line"><span class="comment">#        [255,   0,   0],</span></span><br><span class="line"><span class="comment">#        [  0, 255,   0],</span></span><br><span class="line"><span class="comment">#        [  0,   0,   0]</span></span><br><span class="line"> palette[image]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/641741110977fe6ea74486591098e52b.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/641741110977fe6ea74486591098e52b.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>我们还可以为多个维度提供索引。每个维度的索引数组必须具有相同的形状。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/f53e8c1bacc255d5d256f0c88f042d5f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/f53e8c1bacc255d5d256f0c88f042d5f.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i = np.array([[<span class="number">0</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">2</span>]])          <span class="comment">#对应a数组的横下标</span></span><br><span class="line">j = np.array([[<span class="number">2</span>,<span class="number">1</span>],[<span class="number">3</span>,<span class="number">3</span>]])          <span class="comment">#对应a数组的纵下标</span></span><br><span class="line">a[i,j]                               <span class="comment">#i,j必须要有相同的形状，因为要一一对应</span></span><br><span class="line"><span class="comment">#对应结果a[0,2] = 2,a[1,1]=5......</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/69d81618bb477aa5301bf8324d181d3e.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/69d81618bb477aa5301bf8324d181d3e.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2根据广播规则扩展为</span></span><br><span class="line"><span class="comment">#[2,2]</span></span><br><span class="line"><span class="comment">#[2,2]</span></span><br><span class="line">a[i,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/00f8d05e318907d6a4bdb459124bb203.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/00f8d05e318907d6a4bdb459124bb203.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># :相当于</span></span><br><span class="line"><span class="comment">#[[0,0],[0,0]]</span></span><br><span class="line"><span class="comment">#[[1,1],[1,1]]</span></span><br><span class="line"><span class="comment">#[[2,2],[2,2]]</span></span><br><span class="line"><span class="comment"># j 根据广播规则扩展为</span></span><br><span class="line"><span class="comment">#[[2,1],[3,3]]</span></span><br><span class="line"><span class="comment">#[[2,1],[3,3]]</span></span><br><span class="line"><span class="comment">#[[2,1],[3,3]]</span></span><br><span class="line">a[:,j]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8e4d74c7a963666374a02922ee31db7f.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8e4d74c7a963666374a02922ee31db7f.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>您还可以将索引与数组一起用作分配给以下对象的目标：</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; np.arange(5)</span><br><span class="line">print(a)</span><br><span class="line">a[[1,3,4]]&#x3D;0</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d9d6fd3a198010dd9ab28dbd1e43d370.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d9d6fd3a198010dd9ab28dbd1e43d370.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>但是，当索引列表包含重复项时，分配将完成几次，而留下最后一个值：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">5</span>)</span><br><span class="line">a[[<span class="number">0</span>,<span class="number">0</span>,<span class="number">2</span>]]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]    <span class="comment">#执行两次对a[0]的赋值，最后一次a[0]=2</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/ce1959ff6b02130bac3b087b86fffd93.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/ce1959ff6b02130bac3b087b86fffd93.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h3 id="用布尔数组建立索引"><a href="#用布尔数组建立索引" class="headerlink" title="用布尔数组建立索引"></a>用布尔数组建立索引</h3><blockquote>
@@ -1114,25 +1114,25 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">b = a&gt;<span class="number">4</span></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7712f78e2de0f6b8e3185af43b575599.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/7712f78e2de0f6b8e3185af43b575599.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[b]     <span class="comment">#返回的是一维数组</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/978a156f7de40e0141b16c6a45acb088.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/978a156f7de40e0141b16c6a45acb088.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>这个属性在分配时也同样有用</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[b] = <span class="number">0</span>        所有大于<span class="number">4</span>的都置为<span class="number">0</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/336b3ef682ce96979602bcb6bad2527d.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/336b3ef682ce96979602bcb6bad2527d.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>您可以看下面的示例，看看如何使用布尔索引来生成<a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank" rel="noopener">Mandelbrot集</a>的图像：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mandelbrot</span><span class="params">( h,w, maxit=<span class="number">20</span> )</span>:</span></span><br><span class="line">    <span class="string">"""返回大小(h,w)的曼德尔布罗特分形图像"""</span></span><br><span class="line">    y,x = np.ogrid[ <span class="number">-1.4</span>:<span class="number">1.4</span>:h*<span class="number">1j</span>, <span class="number">-2</span>:<span class="number">0.8</span>:w*<span class="number">1j</span> ]   <span class="comment">#横纵坐标,ogrid函数：取[-1.4,1.4),个数为h*1j</span></span><br><span class="line">    <span class="comment">#print(x.shape)   (1,400)</span></span><br><span class="line">    <span class="comment">#print(y.shape)   (400,1)</span></span><br><span class="line">    c = x+y*<span class="number">1j</span></span><br><span class="line">    z = c</span><br><span class="line">    <span class="comment">#print(c.shape)    (400,400)   c[i,j]=x[i,j]+y[i,j]</span></span><br><span class="line">    divtime = maxit + np.zeros(z.shape, dtype=int)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(maxit):</span><br><span class="line">        z = z**<span class="number">2</span> + c</span><br><span class="line">        diverge = z*np.conj(z) &gt; <span class="number">2</span>**<span class="number">2</span>            <span class="comment"># 谁是发散的,（conj函数用于返回复数的共轭值）</span></span><br><span class="line">        div_now = diverge &amp; (divtime==maxit)  <span class="comment"># 谁现在发散,（div_now是一个(400,400)的布尔值）</span></span><br><span class="line">        <span class="comment">#print(i,div_now)</span></span><br><span class="line">        divtime[div_now] = i                  <span class="comment"># note when</span></span><br><span class="line">        z[diverge] = <span class="number">2</span>                        <span class="comment"># 避免分散过多</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> divtime</span><br><span class="line">plt.imshow(mandelbrot(<span class="number">400</span>,<span class="number">400</span>))</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/61d7cb10e47fba71c27559a4282995b4.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/61d7cb10e47fba71c27559a4282995b4.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>使用布尔值建立索引的第二种方式与整数索引更相似；</p>
@@ -1140,15 +1140,15 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">print(a)</span><br><span class="line">b1 = np.array([<span class="literal">False</span>,<span class="literal">True</span>,<span class="literal">True</span>])</span><br><span class="line">b2 = np.array([<span class="literal">True</span>,<span class="literal">False</span>,<span class="literal">True</span>,<span class="literal">False</span>])</span><br><span class="line">a[b1,:]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3bebe1393fa412dc493251093ea3c046.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/3bebe1393fa412dc493251093ea3c046.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[:,b2]</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d5d2891e7f8cef98757e34ec59615fa8.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d5d2891e7f8cef98757e34ec59615fa8.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[b1,b2]         <span class="comment">#好奇怪，不大懂，候补</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/141fe25f7833cdab900e55fadb0942be.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/141fe25f7833cdab900e55fadb0942be.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>注意，一维布尔数组的长度必须与要切片的维度(或轴)的长度一致。在前面的示例中，b1的长度为3 (a中的行数)，而b2(长度为4)适合于索引a的第二个轴(列)。</p>
@@ -1160,15 +1160,15 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">b = np.array([<span class="number">8</span>,<span class="number">5</span>,<span class="number">4</span>])</span><br><span class="line">c = np.array([<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">3</span>])</span><br><span class="line">ax,bx,cx = np.ix_(a,b,c)</span><br><span class="line">print(ax,ax.shape,<span class="string">'\n'</span>)</span><br><span class="line">print(bx,bx.shape,<span class="string">'\n'</span>)</span><br><span class="line">print(cx,cx.shape,<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8087c05d94b8c2d4d07d252386be1cb3.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/8087c05d94b8c2d4d07d252386be1cb3.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = ax+bx*cx</span><br><span class="line">print(result.shape)</span><br><span class="line">result</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a6e7c1d65148997871a59a9342801111.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a6e7c1d65148997871a59a9342801111.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(result[<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>])</span><br><span class="line">print(a[<span class="number">3</span>]+b[<span class="number">2</span>]*c[<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/dfb958fd84247d91e329f435aeb6e6da.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/dfb958fd84247d91e329f435aeb6e6da.png" style="zoom:80%;margin-left:10px" />
 
 <blockquote>
 <p>另一种方式</p>
@@ -1176,7 +1176,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ufunc_reduce</span><span class="params">(ufct, *vectors)</span>:</span></span><br><span class="line">    vs = np.ix_(*vectors)</span><br><span class="line">    r = ufct.identity</span><br><span class="line">    <span class="keyword">for</span> v <span class="keyword">in</span> vs:</span><br><span class="line">        r = ufct(r,v)</span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line">ufunc_reduce(np.add,a,b,c)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/bb55a653d14785eb11b65459bdf3c59c.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/bb55a653d14785eb11b65459bdf3c59c.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h3 id="用字符串索引"><a href="#用字符串索引" class="headerlink" title="用字符串索引"></a>用字符串索引</h3><blockquote>
@@ -1184,7 +1184,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([(<span class="string">'Rex'</span>, <span class="number">9</span>, <span class="number">81.0</span>), (<span class="string">'Fido'</span>, <span class="number">3</span>, <span class="number">27.0</span>)],</span><br><span class="line">              dtype=[(<span class="string">'name'</span>, <span class="string">'U10'</span>), (<span class="string">'age'</span>, <span class="string">'i4'</span>), (<span class="string">'weight'</span>, <span class="string">'f4'</span>)])</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c1afedab68e10bb41fb3d116a1dad8a2.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c1afedab68e10bb41fb3d116a1dad8a2.png" style="zoom:80%;margin-left:10px" />
 
 <p>更多请参阅<a href="https://numpy.org/devdocs/user/basics.rec.html#structured-arrays" target="_blank" rel="noopener">结构化数组</a></p>
 <br>
@@ -1199,35 +1199,35 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.transpose()         <span class="comment">#转置</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/81873dbc2c4c9ebfe4ada546b165f175.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/81873dbc2c4c9ebfe4ada546b165f175.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.inv(a)      <span class="comment">#矩阵求逆</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/70767a4c3a9e6a34f45d8d0e0f1b1b52.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/70767a4c3a9e6a34f45d8d0e0f1b1b52.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.det(a)      <span class="comment">#求行列式</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c5e234fa5d297b58cf65915f81bb43f0.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/c5e234fa5d297b58cf65915f81bb43f0.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">u = np.eye(<span class="number">2</span>)    <span class="comment">#单位矩阵</span></span><br><span class="line">u</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/f1d048ed112bfd7f309d15a8abf53464.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/f1d048ed112bfd7f309d15a8abf53464.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">j = np.array([[<span class="number">0.0</span>, <span class="number">-1.0</span>], [<span class="number">1.0</span>, <span class="number">0.0</span>]])</span><br><span class="line">j@j               <span class="comment">#矩阵相乘</span></span><br></pre></td></tr></table></figure>
 
-<img src="C:\Users\wangz\AppData\Roaming\Typora\typora-user-images\image-20201107222906525.png" alt="image-20201107222906525" style="zoom:80%;margin-left:10px" />
+<img data-src="C:\Users\wangz\AppData\Roaming\Typora\typora-user-images\image-20201107222906525.png" alt="image-20201107222906525" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.trace(u)    <span class="comment">#矩阵的迹</span></span><br><span class="line"><span class="comment">#在线性代数中，一个n×n矩阵A的主对角线（从左上方至右下方的对角线）上各个元素的总和被称为矩阵A的迹（或迹数），一般记作tr(A)。</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d913a8f425f0ba22e643a39fca884366.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/d913a8f425f0ba22e643a39fca884366.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y = np.array([[<span class="number">5.</span>],[<span class="number">7</span>,]])</span><br><span class="line">np.linalg.solve(a,y)      <span class="comment"># 调用solve函数求解线性方程</span></span><br><span class="line">solve函数有两个参数a和b。a是一个N*N的二维数组，而b是一个长度为N的一维数组，solve函数找到一个长度为N的一维数组x，使得a和x的矩阵乘积正好等于b，数组x就是多元一次方程组的解</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4b1cf7df575384f5046087567a9b9acc.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/4b1cf7df575384f5046087567a9b9acc.png" style="zoom:80%;margin-left:10px" />
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.eig(j)       <span class="comment">#计算一个方阵的特征值和右特征向量。</span></span><br><span class="line"><span class="comment">#numpy.linalg.eig(a)[source]</span></span><br><span class="line"><span class="comment">#参数：</span></span><br><span class="line"><span class="comment">#a(…，M, M)数组</span></span><br><span class="line"><span class="comment">#为其计算特征值和正确特征向量的矩阵</span></span><br><span class="line"><span class="comment">#返回值</span></span><br><span class="line"><span class="comment">#w(…,M)数组</span></span><br><span class="line"><span class="comment">#特征值，每个根据它的多重性重复。特征值不一定是有序的。得到的数组将是复杂类型，除非虚部为零，在这种情况下，它将被转换为实类型。当a为实时，所得到的特征值将为实(0虚部)或以共轭对出现</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#v(…，M, M)数组</span></span><br><span class="line"><span class="comment">#归一化(单位“length”)特征向量，使列v[:，i]为特征值w[i]对应的特征向量。</span></span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/ad3da089c2d117603b5f8045bedf3487.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/ad3da089c2d117603b5f8045bedf3487.png" style="zoom:80%;margin-left:10px" />
 
 <br>
 
@@ -1236,7 +1236,7 @@
 
 <h2 id="技巧与窍门"><a href="#技巧与窍门" class="headerlink" title="技巧与窍门"></a>技巧与窍门</h2><h3 id="”自动“重塑"><a href="#”自动“重塑" class="headerlink" title="”自动“重塑"></a>”自动“重塑</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">30</span>)</span><br><span class="line">b = a.reshape((<span class="number">2</span>,<span class="number">-1</span>,<span class="number">3</span>))   <span class="comment">#-1指“Whatever is needed”</span></span><br><span class="line">print(b,<span class="string">'\n'</span>,b.shape)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a396e1ce29b883001a5739f599d5b3bd.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/a396e1ce29b883001a5739f599d5b3bd.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <h3 id="向量堆叠"><a href="#向量堆叠" class="headerlink" title="向量堆叠"></a>向量堆叠</h3><blockquote>
@@ -1246,7 +1246,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">0</span>,<span class="number">10</span>,<span class="number">2</span>)</span><br><span class="line">y = np.arange(<span class="number">5</span>)</span><br><span class="line">m = np.vstack([x,y])</span><br><span class="line">print(m)</span><br><span class="line">n = np.hstack([x,y])</span><br><span class="line">print(n)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1c62ebd370d8096df19c00f96977ba16.png" style="zoom: 80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/1c62ebd370d8096df19c00f96977ba16.png" style="zoom: 80%;margin-left:10px" />
 
 <hr>
 <h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h3><blockquote>
@@ -1256,7 +1256,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">rg = np.random.default_rng(<span class="number">1</span>)       <span class="comment">#设置随机种子</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment">#正态分布</span></span><br><span class="line">mu,sigma = <span class="number">2</span>,<span class="number">0.5</span>     <span class="comment">#参数</span></span><br><span class="line">v = rg.normal(mu,sigma,<span class="number">10000</span>)<span class="comment">#满足正态分布的10000个数</span></span><br><span class="line">plt.hist(v,bins=<span class="number">50</span>,density=<span class="number">1</span>)   <span class="comment">#bins：直方图的宽度，density:密度</span></span><br><span class="line">(n,bins)=np.histogram(v,bins=<span class="number">50</span>,density=<span class="literal">True</span>)</span><br><span class="line">plt.plot(<span class="number">.5</span>*(bins[<span class="number">1</span>:]+bins[:<span class="number">-1</span>]),n)</span><br></pre></td></tr></table></figure>
 
-<img src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5bf74fa2cba6d4bec9218260a854e58c.png" style="zoom:80%;margin-left:10px" />
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/07/5bf74fa2cba6d4bec9218260a854e58c.png" style="zoom:80%;margin-left:10px" />
 
 <hr>
 <p>如果发现问题或有疑问，欢迎下方留言</p>
@@ -1474,15 +1474,17 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
+
+
 
 
         
@@ -1500,6 +1502,7 @@
   
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
