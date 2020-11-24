@@ -40,8 +40,20 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/f6a8d7ad3ab96cd87247561467f3ac1e.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/1ab9b44582b36347143958a8f37dd3e4.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/89cdbacf05816030f8066139b9f4b274.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/e39feee687989169c388c49c688e344b.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/103fee29e96cd5aa9e3627150d5503c0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/c5ac844fe89a9cd085597448e109685e.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/9ac2fbb7519ce88a7bfcd4ead0e9e02a.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/35c5d4cbbbc48b25091c67bf521e5f47.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/078bbd773ea2b5b201452c9aecb9cc7b.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/cd0973359c7db5967e599c14527ace09.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/90539974421a6fca5a2dc65692585ef8.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/2be1df404bf519ee9d238e605d88a29e.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/b040655da0667b35b05ba9e485cd997a.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/603d9465d641ab9fbc054b2be2210135.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/0068644f6e1423bf18d9aa56a5a08ae5.png">
 <meta property="article:published_time" content="2020-11-21T05:57:30.000Z">
-<meta property="article:modified_time" content="2020-11-23T13:48:02.383Z">
+<meta property="article:modified_time" content="2020-11-24T09:43:15.515Z">
 <meta property="article:author" content="WangzzZ">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Matplotlib">
@@ -222,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-23 21:48:02" itemprop="dateModified" datetime="2020-11-23T21:48:02+08:00">2020-11-23</time>
+                <time title="修改时间：2020-11-24 17:43:15" itemprop="dateModified" datetime="2020-11-24T17:43:15+08:00">2020-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,14 +273,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.3k</span>
+              <span>12k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>11 分钟</span>
             </span>
 
           
@@ -751,11 +763,135 @@
 
 <img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/89cdbacf05816030f8066139b9f4b274.png" style="zoom:80%;margin-left:10px" />
 
+<br>
+
 <hr>
 <br>
 
-<p>如果在文章中发现问题或是对matplotlib有些许疑问欢迎在评论区中留言</p>
+<h2 id="图例指南"><a href="#图例指南" class="headerlink" title="图例指南"></a>图例指南</h2><p>&emsp;在Matplotlib中灵活地生成图例</p>
+<p>&emsp;在阅读这一章节前请熟悉关于 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" target="_blank" rel="noopener"><code>legend()</code></a>的讲解</p>
+<blockquote>
+<p>一些常用用语：</p>
+</blockquote>
+<ul>
+<li><strong>图例条目</strong></li>
+</ul>
+<p>图例由一个或多个图例条目组成。一项仅由一个键和一个标签组成。</p>
+<ul>
+<li><strong>图例键</strong></li>
+</ul>
+<p>每个图例标签左侧的彩色/图案标记。</p>
+<ul>
+<li><strong>图例标签</strong></li>
+</ul>
+<p>描述键所代表的文本。</p>
+<ul>
+<li><strong>图例句柄</strong></li>
+</ul>
+<p>用于在图例中生成适当条目的原始对象。</p>
+<p>（也不知道这样子翻译的对不对，先放一下英文版，等明白了再回来改）</p>
+<ul>
+<li><p>legend entry</p>
+<p>A legend is made up of one or more legend entries. An entry is made up of exactly one key and one label.</p>
+</li>
+<li><p>legend key</p>
+<p>The colored/patterned marker to the left of each legend label.</p>
+</li>
+<li><p>legend label</p>
+<p>The text which describes the handle represented by the key.</p>
+</li>
+<li><p>legend handle</p>
+<p>The original object which is used to generate an appropriate entry in the legend.</p>
+</li>
+</ul>
+<hr>
+<h3 id="控制图例条目"><a href="#控制图例条目" class="headerlink" title="控制图例条目"></a>控制图例条目</h3><p>调用无参的<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" target="_blank" rel="noopener"><code>legend()</code></a>会自动获取图例handles和它们的关联标签</p>
+<p>这个功能等效于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#等效于ax.legend()</span></span><br><span class="line">handles, labels = ax.get_legend_handles_labels()</span><br><span class="line">ax.legend(handles, labels)</span><br></pre></td></tr></table></figure>
 
+<p>该<a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_legend_handles_labels.html#matplotlib.axes.Axes.get_legend_handles_labels" target="_blank" rel="noopener"><code>get_legend_handles_labels()</code></a>函数返回存在于轴上的handles或artists，可用于生成结果图例的条目——（要注意的是，并非所有的Artist都可以添加到图例中，这种情况下“proxy（代理）”就需要创建）</p>
+<p>带有空字符串作为标签或标签以“ _”开头的artists将被忽略。</p>
+<p>要完全控制添加到图例中的内容，通常可以将适当的handles直接传递给<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" target="_blank" rel="noopener"><code>legend()</code></a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line_up, = plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],label=<span class="string">'Line 2'</span>)</span><br><span class="line">line_down, = plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">'Line 1'</span>)</span><br><span class="line">plt.legend(handles=[line_up,line_down])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/e39feee687989169c388c49c688e344b.png" style="zoom:80%;margin-left:10px" />
+
+<p>在某些情况下，无法设置handles的标签，因此可以将标签列表传递给<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" target="_blank" rel="noopener"><code>legend()</code></a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line_up, = plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],label=<span class="string">'Line 2'</span>)</span><br><span class="line">line_down, = plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">'Line 1'</span>)</span><br><span class="line">plt.legend([line_up,line_down],[<span class="string">'Line Up'</span>,<span class="string">'Line Down'</span>])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/103fee29e96cd5aa9e3627150d5503c0.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<h3 id="创建专门用于添加图例的Artist-又名代理艺术家"><a href="#创建专门用于添加图例的Artist-又名代理艺术家" class="headerlink" title="创建专门用于添加图例的Artist(又名代理艺术家)"></a>创建专门用于添加图例的Artist(又名代理艺术家)</h3><p>并不是所有的handles都能自动转换为图例条目，所以总是有必要创建一个artist。图例handles不必存在于图形或轴上才能使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.patches <span class="keyword">as</span> mpatches</span><br><span class="line"></span><br><span class="line">red_patch = mpatches.Patch(color=<span class="string">'red'</span>,label=<span class="string">'The red data'</span>)</span><br><span class="line">plt.legend(handles=[red_patch])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/c5ac844fe89a9cd085597448e109685e.png" style="zoom:80%;margin-left:10px" />
+
+<p>有许多受支持的图例handles。除了创建颜色patch之外，我们还可以创建带有标记的线：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.lines <span class="keyword">as</span> mlines</span><br><span class="line"></span><br><span class="line">blue_line = mlines.Line2D([],[],color=<span class="string">'blue'</span>,marker=<span class="string">'*'</span>,markersize=<span class="number">15</span>,label=<span class="string">'Blue Star'</span>)</span><br><span class="line">plt.legend(handles=[blue_line])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/9ac2fbb7519ce88a7bfcd4ead0e9e02a.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<h3 id="图例位置"><a href="#图例位置" class="headerlink" title="图例位置"></a>图例位置</h3><p>图例的位置可以通过关键字<strong>loc</strong>来指定。请在官方文档<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" target="_blank" rel="noopener"><code>legend()</code></a>查看更多细节 </p>
+<p>bbox_to_anchor关键字为手动图例的位置提供了很大程度的控制。</p>
+<p>例如，如果你想让坐标轴图例位于图形的右上角而不是坐标轴的角落，只需指定角落的位置和该位置的坐标系统:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">'Line'</span>)</span><br><span class="line"><span class="comment">#plt.gcf().transFigure获取当前figure</span></span><br><span class="line">plt.legend(bbox_to_anchor=(<span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">           bbox_transform=plt.gcf().transFigure)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/35c5d4cbbbc48b25091c67bf521e5f47.png" style="zoom:80%;margin-left:10px" />
+
+<p>更多自定义图例放置的例子:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot(<span class="number">211</span>)</span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],label=<span class="string">"Line 1"</span>)</span><br><span class="line">plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">"Line 2"</span>)</span><br><span class="line">plt.legend(bbox_to_anchor=(<span class="number">0.</span>,<span class="number">1.02</span>,<span class="number">1.</span>,<span class="number">.102</span>),loc=<span class="string">'lower left'</span>,ncol=<span class="number">2</span>,mode=<span class="string">"expand"</span>,borderaxespad=<span class="number">0.</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">223</span>)</span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],label=<span class="string">"Line 1"</span>)</span><br><span class="line">plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">"Line 2"</span>)</span><br><span class="line">plt.legend(bbox_to_anchor=(<span class="number">1.05</span>,<span class="number">1</span>),loc=<span class="string">'upper left'</span>,borderaxespad=<span class="number">0.</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/078bbd773ea2b5b201452c9aecb9cc7b.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<h3 id="同一个Axes下多个图例"><a href="#同一个Axes下多个图例" class="headerlink" title="同一个Axes下多个图例"></a>同一个Axes下多个图例</h3><p>手动将图例添加到当前Axes下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">line1, = plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],label=<span class="string">"Line 1"</span>,linestyle=<span class="string">'--'</span>)</span><br><span class="line">line2, = plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],label=<span class="string">"Line 2"</span>,linewidth=<span class="number">5</span>)</span><br><span class="line"><span class="comment">#为第一条线创建图例</span></span><br><span class="line">first_legend = plt.legend(handles=[line1],loc=<span class="string">'upper right'</span>)</span><br><span class="line"><span class="comment">#将first_legend手动地添加到当前Axes</span></span><br><span class="line">ax = plt.gca().add_artist(first_legend)</span><br><span class="line"><span class="comment">#为第二条线创建图例</span></span><br><span class="line">plt.legend(handles=[line2],loc=<span class="string">'lower right'</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/cd0973359c7db5967e599c14527ace09.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<h3 id="图例Handlers"><a href="#图例Handlers" class="headerlink" title="图例Handlers"></a>图例Handlers</h3><p>为了创建图例条目，handles被作为参数提供给适当的HandlerBase子类。</p>
+<p>使用自定义Handlers的最简单示例是实例化一个现有的<a href="https://matplotlib.org/api/legend_handler_api.html#matplotlib.legend_handler.HandlerBase" target="_blank" rel="noopener"><code>legend_handler.HandlerBase</code></a>的子类。</p>
+<p>为了简单起见，我们选择<a href="https://matplotlib.org/api/legend_handler_api.html#matplotlib.legend_handler.HandlerLine2D" target="_blank" rel="noopener"><code>legend_handler.HandlerLine2D</code></a>，它接受numpoints参数（numpoints也是legend()函数上的一个关键字）。</p>
+<p>然后，我们可以将实例到Handler的映射作为关键字传递给legend。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.legend_handler <span class="keyword">import</span> HandlerLine2D</span><br><span class="line"></span><br><span class="line">line1, = plt.plot([<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],marker=<span class="string">'o'</span>,label=<span class="string">'Line 1'</span>)</span><br><span class="line">line2, = plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],marker=<span class="string">'o'</span>,label=<span class="string">'Line 2'</span>)</span><br><span class="line"></span><br><span class="line">plt.legend(handler_map=&#123;line1: HandlerLine2D(numpoints=<span class="number">3</span>)&#125;)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/90539974421a6fca5a2dc65692585ef8.png" style="zoom:80%;margin-left:10px" />
+
+<p>除了用于errorbar、stem plot和histograms等复杂图形类型的Handlers外,默认的handler_map还有一个特殊的元组handler(<a href="https://matplotlib.org/api/legend_handler_api.html#matplotlib.legend_handler.HandlerTuple" target="_blank" rel="noopener"><code>legend_handler.HandlerTuple</code></a>),它简单地为给定元组中的每个项绘制一个又一个的handles。</p>
+<p>下面的例子演示了将两个图例键组合在一起:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy.random <span class="keyword">import</span> randn</span><br><span class="line"></span><br><span class="line">z = randn(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">red_dot, = plt.plot(z, <span class="string">"ro"</span>, markersize=<span class="number">15</span>)</span><br><span class="line"><span class="comment"># 白色十字图案放在前五个数据上显示</span></span><br><span class="line">white_cross, = plt.plot(z[:<span class="number">5</span>], <span class="string">"w+"</span>, markeredgewidth=<span class="number">3</span>, markersize=<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line">plt.legend([red_dot, (red_dot, white_cross)], [<span class="string">"Attr A"</span>, <span class="string">"Attr A+B"</span>])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/2be1df404bf519ee9d238e605d88a29e.png" style="zoom:80%;margin-left:10px" />
+
+<p><a href="https://matplotlib.org/api/legend_handler_api.html#matplotlib.legend_handler.HandlerTuple" target="_blank" rel="noopener"><code>legend_handler.HandlerTuple</code></a> 类也可以用来为同一个条目分配几个图例键:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.legend_handler <span class="keyword">import</span> HandlerLine2D, HandlerTuple</span><br><span class="line"></span><br><span class="line">p1, = plt.plot([<span class="number">1</span>, <span class="number">2.5</span>, <span class="number">3</span>], <span class="string">'r-d'</span>)</span><br><span class="line">p2, = plt.plot([<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>], <span class="string">'k-o'</span>)</span><br><span class="line"></span><br><span class="line">l = plt.legend([(p1, p2)], [<span class="string">'Two keys'</span>], numpoints=<span class="number">1</span>,</span><br><span class="line">               handler_map=&#123;tuple: HandlerTuple(ndivide=<span class="literal">None</span>)&#125;)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/b040655da0667b35b05ba9e485cd997a.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<h3 id="实现自定义的图例handler"><a href="#实现自定义的图例handler" class="headerlink" title="实现自定义的图例handler"></a>实现自定义的图例handler</h3><p>可以实现自定义handler来将任何handle转换为图例键(handles不一定需要是matplotlib artists对象)。</p>
+<p>handler必须实现一个legend_artist方法，该方法为图例返回一个artist对象来使用。</p>
+<p>legend_artist所需的签名，记录在<a href="https://matplotlib.org/api/legend_handler_api.html#matplotlib.legend_handler.HandlerBase.legend_artist" target="_blank" rel="noopener"><code>legend_artist</code></a>中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.patches <span class="keyword">as</span> mpatches</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnyObject</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AnyObjectHandler</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">legend_artist</span><span class="params">(self, legend, orig_handle, fontsize, handlebox)</span>:</span></span><br><span class="line">        x0, y0 = handlebox.xdescent, handlebox.ydescent</span><br><span class="line">        width, height = handlebox.width, handlebox.height</span><br><span class="line">        patch = mpatches.Rectangle([x0, y0], width, height, facecolor=<span class="string">'red'</span>,</span><br><span class="line">                                   edgecolor=<span class="string">'black'</span>, hatch=<span class="string">'xx'</span>, lw=<span class="number">3</span>,</span><br><span class="line">                                   transform=handlebox.get_transform())</span><br><span class="line">        handlebox.add_artist(patch)</span><br><span class="line">        <span class="keyword">return</span> patch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.legend([AnyObject()], [<span class="string">'My first handler'</span>],</span><br><span class="line">           handler_map=&#123;AnyObject: AnyObjectHandler()&#125;)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/603d9465d641ab9fbc054b2be2210135.png" style="zoom:80%;margin-left:10px" />
+
+<p>或者，如果我们想要全局地接受AnyObject实例，而不需要一直手动设置handler_map关键字，我们可以用:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.legend <span class="keyword">import</span> Legend</span><br><span class="line">Legend.update_default_handler_map(&#123;AnyObject: AnyObjectHandler()&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>虽然这里的功能很明显，但请记住，已经实现了许多handlers，并且您想要实现的可能已经很容易地通过现有的类实现了。</p>
+<p>例如，产生椭圆的图例键，而不是矩形的:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.legend_handler <span class="keyword">import</span> HandlerPatch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HandlerEllipse</span><span class="params">(HandlerPatch)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">create_artists</span><span class="params">(self, legend, orig_handle,</span></span></span><br><span class="line"><span class="function"><span class="params">                       xdescent, ydescent, width, height, fontsize, trans)</span>:</span></span><br><span class="line">        center = <span class="number">0.5</span> * width - <span class="number">0.5</span> * xdescent, <span class="number">0.5</span> * height - <span class="number">0.5</span> * ydescent</span><br><span class="line">        p = mpatches.Ellipse(xy=center, width=width + xdescent,</span><br><span class="line">                             height=height + ydescent)</span><br><span class="line">        self.update_prop(p, orig_handle, legend)</span><br><span class="line">        p.set_transform(trans)</span><br><span class="line">        <span class="keyword">return</span> [p]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">c = mpatches.Circle((<span class="number">0.5</span>, <span class="number">0.5</span>), <span class="number">0.25</span>, facecolor=<span class="string">"green"</span>,</span><br><span class="line">                    edgecolor=<span class="string">"red"</span>, linewidth=<span class="number">3</span>)</span><br><span class="line">plt.gca().add_patch(c)</span><br><span class="line"></span><br><span class="line">plt.legend([c], [<span class="string">"An ellipse, not a rectangle"</span>],</span><br><span class="line">           handler_map=&#123;mpatches.Circle: HandlerEllipse()&#125;)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/24/0068644f6e1423bf18d9aa56a5a08ae5.png" style="zoom:80%;margin-left:10px" />
+
+<br>
+
+<hr>
+<br>
     </div>
 
     
@@ -863,7 +999,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Artist教程"><span class="nav-number">2.</span> <span class="nav-text">Artist教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义对象"><span class="nav-number">2.1.</span> <span class="nav-text">自定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象容器"><span class="nav-number">2.2.</span> <span class="nav-text">对象容器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Figure容器"><span class="nav-number">2.2.1.</span> <span class="nav-text">Figure容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axes容器"><span class="nav-number">2.2.2.</span> <span class="nav-text">Axes容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axis容器"><span class="nav-number">2.2.3.</span> <span class="nav-text">Axis容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tick容器"><span class="nav-number">2.2.4.</span> <span class="nav-text">Tick容器</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Artist教程"><span class="nav-number">2.</span> <span class="nav-text">Artist教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义对象"><span class="nav-number">2.1.</span> <span class="nav-text">自定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象容器"><span class="nav-number">2.2.</span> <span class="nav-text">对象容器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Figure容器"><span class="nav-number">2.2.1.</span> <span class="nav-text">Figure容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axes容器"><span class="nav-number">2.2.2.</span> <span class="nav-text">Axes容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axis容器"><span class="nav-number">2.2.3.</span> <span class="nav-text">Axis容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tick容器"><span class="nav-number">2.2.4.</span> <span class="nav-text">Tick容器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图例指南"><span class="nav-number">3.</span> <span class="nav-text">图例指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制图例条目"><span class="nav-number">3.1.</span> <span class="nav-text">控制图例条目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建专门用于添加图例的Artist-又名代理艺术家"><span class="nav-number">3.2.</span> <span class="nav-text">创建专门用于添加图例的Artist(又名代理艺术家)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图例位置"><span class="nav-number">3.3.</span> <span class="nav-text">图例位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同一个Axes下多个图例"><span class="nav-number">3.4.</span> <span class="nav-text">同一个Axes下多个图例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图例Handlers"><span class="nav-number">3.5.</span> <span class="nav-text">图例Handlers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现自定义的图例handler"><span class="nav-number">3.6.</span> <span class="nav-text">实现自定义的图例handler</span></a></li></ol></li></ol></div>
       </div>
 
 
@@ -966,12 +1102,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">44k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">36 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
