@@ -23,15 +23,25 @@
 
   <meta name="description" content="简介&amp;emsp; 这篇文章介绍了Matplotlib中的一些更复杂的类和函数。并且对于特定的自定义和复杂的可视化很有用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python-Matplotlib-深入学习">
+<meta property="og:title" content="Python-Matplotlib-进一步学习">
 <meta property="og:url" content="https://zangwhe.cn/41087.html">
 <meta property="og:site_name" content="北方向北">
 <meta property="og:description" content="简介&amp;emsp; 这篇文章介绍了Matplotlib中的一些更复杂的类和函数。并且对于特定的自定义和复杂的可视化很有用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/21/1c272f0ea6f2440708d470c7c08984bf.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/21/d0ac5fad59709d82828ccc99530f100c.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/6301a5c1d03690a06069cab845adcebe.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/845809658b4ccf59f69abc810e486494.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/6c744e039bd0c8a201ff28664b0440dc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/0fbc0abe28431d8b944b25ee0dd0492e.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/7906d217c1f3663dee47e110d9727534.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/7803d9942ea0d9e48e135acbf07bf329.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/6ac56f788e584febaf1cf95e323a9df8.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/f6a8d7ad3ab96cd87247561467f3ac1e.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/1ab9b44582b36347143958a8f37dd3e4.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/89cdbacf05816030f8066139b9f4b274.png">
 <meta property="article:published_time" content="2020-11-21T05:57:30.000Z">
-<meta property="article:modified_time" content="2020-11-22T09:33:21.012Z">
+<meta property="article:modified_time" content="2020-11-23T13:48:02.383Z">
 <meta property="article:author" content="WangzzZ">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Matplotlib">
@@ -51,7 +61,7 @@
   };
 </script>
 
-  <title>Python-Matplotlib-深入学习 | 北方向北</title>
+  <title>Python-Matplotlib-进一步学习 | 北方向北</title>
   
 
 
@@ -194,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python-Matplotlib-深入学习
+          Python-Matplotlib-进一步学习
         </h1>
 
         <div class="post-meta">
@@ -212,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-22 17:33:21" itemprop="dateModified" datetime="2020-11-22T17:33:21+08:00">2020-11-22</time>
+                <time title="修改时间：2020-11-23 21:48:02" itemprop="dateModified" datetime="2020-11-23T21:48:02+08:00">2020-11-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,7 +235,7 @@
             </span>
 
           
-            <span id="/41087.html" class="post-meta-item leancloud_visitors" data-flag-title="Python-Matplotlib-深入学习" title="阅读次数">
+            <span id="/41087.html" class="post-meta-item leancloud_visitors" data-flag-title="Python-Matplotlib-进一步学习" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -251,14 +261,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.7k</span>
+              <span>7.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>7 分钟</span>
             </span>
 
           
@@ -298,7 +308,10 @@
 <p>FigureCanvas和Renderer处理与用户界面工具包(如<a href="https://www.wxpython.org/" target="_blank" rel="noopener">wxPython</a>)或绘图语言(如PostScript®)对话的所有细节，而Artist处理所有高层构造，如表示和布局图形、文本和线条。</p>
 <br>
 
-<p>​    &gt; 有两种类型的Artist: primitives和containers。</p>
+<blockquote>
+<p>引言</p>
+</blockquote>
+<p>​    有两种类型的Artist: primitives和containers。</p>
 <p>​    primitives代表了我们想要在画布上绘制的标准图形对象:<a href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" target="_blank" rel="noopener"><code>Line2D</code></a>, <a href="https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle" target="_blank" rel="noopener"><code>Rectangle</code></a>, <a href="https://matplotlib.org/api/text_api.html#matplotlib.text.Text" target="_blank" rel="noopener"><code>Text</code></a>, <a href="https://matplotlib.org/api/image_api.html#matplotlib.image.AxesImage" target="_blank" rel="noopener"><code>AxesImage</code></a>等;</p>
 <p>​    containers是放置它们的地方 (<a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis" target="_blank" rel="noopener"><code>Axis</code></a>, <a href="https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" target="_blank" rel="noopener"><code>Axes</code></a> and <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" target="_blank" rel="noopener"><code>Figure</code></a>)。</p>
 <br>
@@ -408,7 +421,340 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#结果</span></span><br><span class="line">agg_filter = <span class="literal">None</span></span><br><span class="line">    alpha = <span class="literal">None</span></span><br><span class="line">    animated = <span class="literal">False</span></span><br><span class="line">    antialiased <span class="keyword">or</span> aa = <span class="literal">False</span></span><br><span class="line">    bbox = Bbox(x0=<span class="number">0.0</span>, y0=<span class="number">0.0</span>, x1=<span class="number">1.0</span>, y1=<span class="number">1.0</span>)</span><br><span class="line">    capstyle = butt</span><br><span class="line">    children = []</span><br><span class="line">    clip_box = <span class="literal">None</span></span><br><span class="line">    clip_on = <span class="literal">True</span></span><br><span class="line">    clip_path = <span class="literal">None</span></span><br><span class="line">    contains = <span class="literal">None</span></span><br><span class="line">    data_transform = BboxTransformTo(     TransformedBbox(         Bbox...</span><br><span class="line">    edgecolor <span class="keyword">or</span> ec = (<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>)</span><br><span class="line">    extents = Bbox(x0=<span class="number">0.0</span>, y0=<span class="number">0.0</span>, x1=<span class="number">432.0</span>, y1=<span class="number">288.0</span>)</span><br><span class="line">    facecolor <span class="keyword">or</span> fc = (<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>)</span><br><span class="line">    figure = Figure(<span class="number">432</span>x288)</span><br><span class="line">    fill = <span class="literal">True</span></span><br><span class="line">    gid = <span class="literal">None</span></span><br><span class="line">    hatch = <span class="literal">None</span></span><br><span class="line">    height = <span class="number">1</span></span><br><span class="line">    in_layout = <span class="literal">False</span></span><br><span class="line">    joinstyle = miter</span><br><span class="line">    label = </span><br><span class="line">    linestyle <span class="keyword">or</span> ls = solid</span><br><span class="line">    linewidth <span class="keyword">or</span> lw = <span class="number">0.0</span></span><br><span class="line">    patch_transform = CompositeGenericTransform(     BboxTransformTo(   ...</span><br><span class="line">    path = Path(array([[<span class="number">0.</span>, <span class="number">0.</span>],        [<span class="number">1.</span>, <span class="number">0.</span>],        [<span class="number">1.</span>,...</span><br><span class="line">    path_effects = []</span><br><span class="line">    picker = <span class="literal">None</span></span><br><span class="line">    rasterized = <span class="literal">None</span></span><br><span class="line">    sketch_params = <span class="literal">None</span></span><br><span class="line">    snap = <span class="literal">None</span></span><br><span class="line">    transform = CompositeGenericTransform(     CompositeGenericTra...</span><br><span class="line">    transformed_clip_path_and_affine = (<span class="literal">None</span>, <span class="literal">None</span>)</span><br><span class="line">    url = <span class="literal">None</span></span><br><span class="line">    verts = [[  <span class="number">0.</span>   <span class="number">0.</span>]  [<span class="number">432.</span>   <span class="number">0.</span>]  [<span class="number">432.</span> <span class="number">288.</span>]  [  <span class="number">0.</span> <span class="number">288.</span>...</span><br><span class="line">    visible = <span class="literal">True</span></span><br><span class="line">    width = <span class="number">1</span></span><br><span class="line">    window_extent = Bbox(x0=<span class="number">0.0</span>, y0=<span class="number">0.0</span>, x1=<span class="number">432.0</span>, y1=<span class="number">288.0</span>)</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    xy = (<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">    y = <span class="number">0</span></span><br><span class="line">    zorder = <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>更多关于给定对象的属性列表可查看 <a href="https://matplotlib.org/api/artist_api.html#artist-api" target="_blank" rel="noopener">matplotlib.artist</a></strong></p>
-<h3 id="对象容器"><a href="#对象容器" class="headerlink" title="对象容器"></a>对象容器</h3><p>既然我们知道了如何检查和设置要配置的给定对象的属性，那么我们需要知道如何获取该对象。正如引言中提到的，对象有两种:原语和容器。原语通常要配置的东西(字体的文本实例,Line2D)的宽度虽然容器也有一些属性,例如坐标轴的艺术家是一个容器,其中包含许多原语在你的情节,但它也有属性像xscale控制xaxis是否“线性”或“日志”。在本节中，我们将回顾各种容器对象存储您想要获取的艺术家的位置。</p>
+<h3 id="对象容器"><a href="#对象容器" class="headerlink" title="对象容器"></a>对象容器</h3><p>&emsp;既然我们知道了如何检查和设置要配置的给定对象的属性，那么我们需要知道如何获取该对象。</p>
+<p>&emsp;在本节中，我们将回顾各种容器对象存储您想要获取的Artist的位置。</p>
+<hr>
+<h4 id="Figure容器"><a href="#Figure容器" class="headerlink" title="Figure容器"></a>Figure容器</h4><p>顶层容器Artist是<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" target="_blank" rel="noopener"><code>matplotlib.figure.Figure</code></a>,它包含图中的所有内容。图形的背景是一个矩形，存储在figure .patch中。</p>
+<p>当你在途中添加子图（<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot" target="_blank" rel="noopener"><code>add_subplot()</code></a>）和轴（<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes" target="_blank" rel="noopener"><code>add_axes()</code></a>）时，它们将被附加到<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.axes" target="_blank" rel="noopener"><code>Figure.axes</code></a>，这些也有创建它们的方法返回</p>
+<blockquote>
+<p>举个栗子</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure()</span><br><span class="line"></span><br><span class="line">ax1 = fig.add_subplot(<span class="number">211</span>)  <span class="comment">#添加一个子图</span></span><br><span class="line">ax2 = fig.add_axes([<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.7</span>,<span class="number">0.3</span>])<span class="comment">#添加一个新轴，参数分别是[left,bottom,width,height]</span></span><br><span class="line"></span><br><span class="line">ax1</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/6301a5c1d03690a06069cab845adcebe.png" style="zoom:80%;margin-left:10px" />
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(fig.axes)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/845809658b4ccf59f69abc810e486494.png" style="zoom:80%;margin-left:10px" />
+
+<p>由于该图保留了“当前轴”（请参见<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.gca" target="_blank" rel="noopener"><code>Figure.gca</code></a>和 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.sca" target="_blank" rel="noopener"><code>Figure.sca</code></a>）的概念 以支持pylab / pyplot状态机，66因此您不应直接从轴列表中插入或删除轴，而应使用 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot" target="_blank" rel="noopener"><code>add_subplot()</code></a>和 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes" target="_blank" rel="noopener"><code>add_axes()</code></a>方法插入，以及 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.delaxes" target="_blank" rel="noopener"><code>delaxes()</code></a>方法删除。但是，您可以自由地遍历轴列表或对其进行索引以访问<code>Axes</code>要自定义的实例。</p>
+<p>这是一个打开所有轴网格的示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ax <span class="keyword">in</span> fig.axes:</span><br><span class="line">    ax.grid(<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>图形还有自己的文本、线条、形状和图像，您可以使用它们直接添加primitives。图形的默认坐标系统将简单地以像素为单位(这通常不是你想要的)，但是你可以通过设置你添加到图形中的Artist的transform属性来控制它。</p>
+<p>更有用的是“图形坐标”，其中（0，0）是图形的左下角，而（1，1）是图形的右上角，可以通过将<code>Artist</code>变换设置为来获得<code>fig.transFigure</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.lines <span class="keyword">as</span> lines</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line"></span><br><span class="line">l1 = lines.Line2D([<span class="number">0</span>, <span class="number">1</span>], [<span class="number">0</span>, <span class="number">1</span>], transform=fig.transFigure, figure=fig)</span><br><span class="line">l2 = lines.Line2D([<span class="number">0</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">0</span>], transform=fig.transFigure, figure=fig)</span><br><span class="line">fig.lines.extend([l1, l2])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/22/6c744e039bd0c8a201ff28664b0440dc.png" style="zoom:80%;margin-left:10px" />
+
+<p>下面是该图包含的Artist的摘要</p>
+<table>
+<thead>
+<tr>
+<th>图形属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>axes</td>
+<td>轴的实例 (包括子图)</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>矩形背景</td>
+</tr>
+<tr>
+<td>images</td>
+<td>图形图像形状列表-有用的原始像素显示</td>
+</tr>
+<tr>
+<td>legends</td>
+<td>图像图例（和Axes.legends不同）</td>
+</tr>
+<tr>
+<td>lines</td>
+<td>图像Line2D实例(很少使用，看Axes.lines）</td>
+</tr>
+<tr>
+<td>patches</td>
+<td>图像的形状（很少使用，看 Axes.patches)</td>
+</tr>
+<tr>
+<td>texts</td>
+<td>图像文本</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="Axes容器"><a href="#Axes容器" class="headerlink" title="Axes容器"></a>Axes容器</h4><p>&emsp;matplotlib.axes.Axes是matplotlib的中心——它包含图形中使用的绝大多数美工，以及用于创建和添加这些美工到自身的许多辅助方法，以及用于访问和定制其中包含的美工的辅助方法。</p>
+<p>&emsp;和图一样，它包含了一个 <a href="https://matplotlib.org/api/_as_gen/matplotlib.patches.Patch.html#matplotlib.patches.Patch" target="_blank" rel="noopener"><code>Patch</code></a>，在笛卡尔坐标系中是一个矩形，在极坐标中是一个圆;这个patch决定了作图区域的形状、背景和边界:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">rect = ax.patch  <span class="comment"># 一个矩形实例</span></span><br><span class="line">rect.set_facecolor(<span class="string">'green'</span>)   <span class="comment">#设置背景颜色为绿色</span></span><br></pre></td></tr></table></figure>
+
+<p>当你调用绘图方法，例如规范化 <a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" target="_blank" rel="noopener"><code>plot()</code></a>并且传入数组或列表的值为参数时，该方法将创建一个<a href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" target="_blank" rel="noopener"><code>matplotlib.lines.Line2D()</code></a>实例，使用作为关键字参数传递的所有Line2D属性更新该line，并将该line添加到Axes.lines容器，并返回给您:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x,y = np.random.rand(<span class="number">2</span>,<span class="number">100</span>)</span><br><span class="line">line,=ax.plot(x,y,<span class="string">'-'</span>,color=<span class="string">'blue'</span>,linewidth=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>plot返回的是一个lines列表，因为你可以传入多个x,y来绘制。</p>
+<p>例如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(ax.lines)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/0fbc0abe28431d8b944b25ee0dd0492e.png" style="zoom:80%;margin-left:10px" />
+
+<p>同样，创建patches的方法，像<a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar" target="_blank" rel="noopener"><code>bar()</code></a>创建了矩阵列表，会添加patches到Axes.patches列表中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure()</span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">n,bins,rectangles = ax.hist(np.random.randn(<span class="number">1000</span>),<span class="number">50</span>)</span><br><span class="line">print(rectangles)</span><br><span class="line">print(len(ax.patches))</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/7906d217c1f3663dee47e110d9727534.png" style="zoom:80%;margin-left:10px" />
+
+<p>有很多axis辅助方法用于创建primitive Artists并将它们添加到各自的容器中。</p>
+<blockquote>
+<p>下面的表格总结了他们的一个小样例，他们创造的Artist类型，以及把他们储存在哪里</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Helper method</th>
+<th>Artist</th>
+<th>Container</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ax.annotate - text annotations</td>
+<td>Annotate(注释)</td>
+<td>ax.texts</td>
+</tr>
+<tr>
+<td>ax.bar - bar charts</td>
+<td>Rectangle</td>
+<td>ax.patches</td>
+</tr>
+<tr>
+<td>ax.errorbar - error bar plots</td>
+<td>Line2D and Rectangle</td>
+<td>ax.lines and ax.patches</td>
+</tr>
+<tr>
+<td>ax.fill - shared area</td>
+<td>Polygon(多边形)</td>
+<td>ax.patches</td>
+</tr>
+<tr>
+<td>ax.hist - histograms</td>
+<td>Rectangle</td>
+<td>ax.patches</td>
+</tr>
+<tr>
+<td>ax.imshow - image data</td>
+<td>AxesImage</td>
+<td>ax.images</td>
+</tr>
+<tr>
+<td>ax.legend - axes legends</td>
+<td>Legend(图例)</td>
+<td>ax.legends</td>
+</tr>
+<tr>
+<td>ax.plot - xy plots</td>
+<td>Line2D</td>
+<td>ax.lines</td>
+</tr>
+<tr>
+<td>ax.scatter - scatter charts</td>
+<td>PolygonCollection （多边形集合）</td>
+<td>ax.collections</td>
+</tr>
+<tr>
+<td>ax.text - text</td>
+<td>Text</td>
+<td>ax.texts</td>
+</tr>
+</tbody></table>
+<br>
+
+<blockquote>
+<p>下面这个是Axes容器的Artist对象的概括：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Axes attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>artists</td>
+<td>Artist 实例的列表</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>Axes的背景的矩阵实例的列表</td>
+</tr>
+<tr>
+<td>collections</td>
+<td>集合实例的列表</td>
+</tr>
+<tr>
+<td>images</td>
+<td>轴图像的列表</td>
+</tr>
+<tr>
+<td>legends</td>
+<td>图例实例的列表</td>
+</tr>
+<tr>
+<td>lines</td>
+<td>Line2D实例的列表</td>
+</tr>
+<tr>
+<td>patches</td>
+<td>Patch实例列表</td>
+</tr>
+<tr>
+<td>texts</td>
+<td>文本实例列表</td>
+</tr>
+<tr>
+<td>xaxis</td>
+<td>matplotlib.axis.XAxis实例</td>
+</tr>
+<tr>
+<td>yaxis</td>
+<td>matplotlib.axis.YAxis实例</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="Axis容器"><a href="#Axis容器" class="headerlink" title="Axis容器"></a>Axis容器</h4><p><a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis" target="_blank" rel="noopener"><code>matplotlib.axis.Axis</code></a>实例处理刻度线、网格线、刻度标签和axis标签的绘制。</p>
+<p>每个Axis对象包含一个label属性(这是pyplot在调用xlabel和ylabel时修改的内容)以及一个主刻度和次要刻度列表。这些刻度是<a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.XTick" target="_blank" rel="noopener"><code>axis.XTick</code></a>和<a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.YTick" target="_blank" rel="noopener"><code>axis.YTick</code></a>的实例，其中包含呈现刻度和刻度标签的actual line和文本primitives。</p>
+<p>​    因为刻度是根据需要动态创建的(例如，在移动和缩放时)，所以应该通过它们的accessor方法<a href="https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_major_ticks.html#matplotlib.axis.Axis.get_major_ticks" target="_blank" rel="noopener"><code>axis.Axis.get_major_ticks</code></a> and <a href="https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_minor_ticks.html#matplotlib.axis.Axis.get_minor_ticks" target="_blank" rel="noopener"><code>axis.Axis.get_minor_ticks</code></a>访问主要刻度和次要刻度的列表。尽管刻度包含了所有的primitives，并且将在下面覆盖，Axis实例有accessor方法返回刻度行，刻度标签，刻度位置等:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fig,ax = plt.subplots()</span><br><span class="line">axis = ax.xaxis</span><br><span class="line">axis.get_ticklocs()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/7803d9942ea0d9e48e135acbf07bf329.png" style="zoom:80%;margin-left:10px" />
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axis.get_ticklabels()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/6ac56f788e584febaf1cf95e323a9df8.png" style="zoom:80%;margin-left:10px" />
+
+<p>请注意，刻度线是标签的两倍，因为默认情况下，顶部和底部有刻度线，但x轴下方仅是刻度线；但是，可以自定义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axis.get_ticklines()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/f6a8d7ad3ab96cd87247561467f3ac1e.png" style="zoom:80%;margin-left:10px" />
+
+<p>以下是的一些有用的<code>Axis</code>的accessor方法的摘要 （这些访问器有相应的setters，例如 <a href="https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.set_major_formatter.html#matplotlib.axis.Axis.set_major_formatter" target="_blank" rel="noopener"><code>set_major_formatter()</code></a>）</p>
+<table>
+<thead>
+<tr>
+<th>Accessor 方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>get_scale</td>
+<td>axis的比例：如“对数”或“线性”</td>
+</tr>
+<tr>
+<td>get_view_interval</td>
+<td>The interval instance of the axis view limits</td>
+</tr>
+<tr>
+<td>get_data_interval</td>
+<td>The interval instance of the axis data limits</td>
+</tr>
+<tr>
+<td>get_gridlines</td>
+<td>用于轴的网格线列表</td>
+</tr>
+<tr>
+<td>get_label</td>
+<td>轴的标签 -文本实例</td>
+</tr>
+<tr>
+<td>get_ticklabels</td>
+<td>一个文本实例列表-keyword minor=True|False</td>
+</tr>
+<tr>
+<td>get_ticklines</td>
+<td>Line2D实例列表- keyword minor=True|False</td>
+</tr>
+<tr>
+<td>get_ticklocs</td>
+<td>刻度位置- keyword minor=True|False</td>
+</tr>
+<tr>
+<td>get_major_locator</td>
+<td>主要刻度的 <a href="https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Locator" target="_blank" rel="noopener"><code>ticker.Locator</code></a> 实例</td>
+</tr>
+<tr>
+<td>get_major_formatter</td>
+<td>主要刻度的 <a href="https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Formatter" target="_blank" rel="noopener"><code>ticker.Formatter</code></a>实例</td>
+</tr>
+<tr>
+<td>get_minor_locator</td>
+<td>次要刻度的 <a href="https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Locator" target="_blank" rel="noopener"><code>ticker.Locator</code></a> 实例</td>
+</tr>
+<tr>
+<td>get_minor_formatter</td>
+<td>次要刻度的<a href="https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Formatter" target="_blank" rel="noopener"><code>ticker.Formatter</code></a>实例</td>
+</tr>
+<tr>
+<td>get_major_ticks</td>
+<td>主要刻度的实例列表</td>
+</tr>
+<tr>
+<td>get_minor_ticks</td>
+<td>次要刻度的实例列表</td>
+</tr>
+<tr>
+<td>grid</td>
+<td>为主要刻度或次要刻度打开或关闭网格</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>举个栗子</p>
+</blockquote>
+<p>可以自定义轴和刻度属性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure()</span><br><span class="line">rect = fig.patch   <span class="comment">#矩形实例</span></span><br><span class="line">rect.set_facecolor(<span class="string">'lightgoldenrodyellow'</span>)</span><br><span class="line"></span><br><span class="line">ax1 = fig.add_axes([<span class="number">0.1</span>,<span class="number">0.3</span>,<span class="number">0.4</span>,<span class="number">0.4</span>])</span><br><span class="line">rect = ax1.patch</span><br><span class="line">rect.set_facecolor(<span class="string">'lightslategray'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> label <span class="keyword">in</span> ax1.xaxis.get_ticklabels():</span><br><span class="line">	<span class="comment">#label是一个文本实例</span></span><br><span class="line">    label.set_color(<span class="string">'red'</span>)</span><br><span class="line">    label.set_rotation(<span class="number">45</span>)</span><br><span class="line">    label.set_fontsize(<span class="number">16</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> ax1.yaxis.get_ticklines():</span><br><span class="line">	<span class="comment">#line是一个Line2D实例</span></span><br><span class="line">    line.set_color(<span class="string">'green'</span>)</span><br><span class="line">    line.set_markersize(<span class="number">25</span>)</span><br><span class="line">    line.set_markeredgewidth(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/1ab9b44582b36347143958a8f37dd3e4.png" style="zoom:80%;margin-left:10px" />
+
+<h4 id="Tick容器"><a href="#Tick容器" class="headerlink" title="Tick容器"></a>Tick容器</h4><p><a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick" target="_blank" rel="noopener"><code>matplotlib.axis.Tick</code></a> 是从<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" target="_blank" rel="noopener"><code>Figure</code></a> 到 <a href="https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" target="_blank" rel="noopener"><code>Axes</code></a> 再到 <a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis" target="_blank" rel="noopener"><code>Axis</code></a> 最后到 <a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick" target="_blank" rel="noopener"><code>Tick</code></a> 的容器对象。</p>
+<p>Tick包含了刻度和网格线，以及上下刻度的标签实例。</p>
+<p>这些中的每一个都可以作为Tick的属性直接访问</p>
+<table>
+<thead>
+<tr>
+<th>Tick属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tick1line</td>
+<td>Line2D 实例</td>
+</tr>
+<tr>
+<td>tick2line</td>
+<td>Line2D 实例</td>
+</tr>
+<tr>
+<td>gridline</td>
+<td>Line2D 实例</td>
+</tr>
+<tr>
+<td>label1</td>
+<td>文本实例</td>
+</tr>
+<tr>
+<td>label2</td>
+<td>文本实例</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>举个栗子</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.ticker <span class="keyword">as</span> ticker</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">19680801</span>)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots()</span><br><span class="line">ax.plot(<span class="number">100</span>*np.random.rand(<span class="number">20</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ax.yaxis.set_major_formatter(ticker.FormatStrFormatter(<span class="string">'%0.2f'</span>))</span><br><span class="line"></span><br><span class="line">ax.yaxis.set_tick_params(which=<span class="string">'major'</span>, labelcolor=<span class="string">'green'</span>,</span><br><span class="line">                         labelleft=<span class="literal">False</span>, labelright=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/23/89cdbacf05816030f8066139b9f4b274.png" style="zoom:80%;margin-left:10px" />
+
+<hr>
+<br>
+
+<p>如果在文章中发现问题或是对matplotlib有些许疑问欢迎在评论区中留言</p>
 
     </div>
 
@@ -424,7 +770,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://zangwhe.cn/41087.html" title="Python-Matplotlib-深入学习">https://zangwhe.cn/41087.html</a>
+    <a href="https://zangwhe.cn/41087.html" title="Python-Matplotlib-进一步学习">https://zangwhe.cn/41087.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -517,7 +863,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Artist教程"><span class="nav-number">2.</span> <span class="nav-text">Artist教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义对象"><span class="nav-number">2.1.</span> <span class="nav-text">自定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象容器"><span class="nav-number">2.2.</span> <span class="nav-text">对象容器</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Artist教程"><span class="nav-number">2.</span> <span class="nav-text">Artist教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义对象"><span class="nav-number">2.1.</span> <span class="nav-text">自定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象容器"><span class="nav-number">2.2.</span> <span class="nav-text">对象容器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Figure容器"><span class="nav-number">2.2.1.</span> <span class="nav-text">Figure容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axes容器"><span class="nav-number">2.2.2.</span> <span class="nav-text">Axes容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Axis容器"><span class="nav-number">2.2.3.</span> <span class="nav-text">Axis容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tick容器"><span class="nav-number">2.2.4.</span> <span class="nav-text">Tick容器</span></a></li></ol></li></ol></li></ol></div>
       </div>
 
 
@@ -620,12 +966,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">36 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
