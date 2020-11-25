@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zangwhe.cn/59195.html</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/28977.html</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zangwhe.cn/15990.html</loc>
     
     <lastmod>2020-11-25</lastmod>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://zangwhe.cn/62063.html</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/28977.html</loc>
     
     <lastmod>2020-11-25</lastmod>
     
@@ -95,28 +102,7 @@
 
   
   <url>
-    <loc>https://zangwhe.cn/tags/Kali/</loc>
-    <lastmod>2020-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/tags/Tool/</loc>
-    <lastmod>2020-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zangwhe.cn/tags/Python/</loc>
-    <lastmod>2020-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zangwhe.cn/tags/Pandas/</loc>
     <lastmod>2020-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -130,7 +116,28 @@
   </url>
   
   <url>
+    <loc>https://zangwhe.cn/tags/Pandas/</loc>
+    <lastmod>2020-11-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zangwhe.cn/tags/Matplotlib/</loc>
+    <lastmod>2020-11-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/tags/Kali/</loc>
+    <lastmod>2020-11-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zangwhe.cn/tags/Tool/</loc>
     <lastmod>2020-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -139,14 +146,14 @@
 
   
   <url>
-    <loc>https://zangwhe.cn/categories/Kali/</loc>
+    <loc>https://zangwhe.cn/categories/Python/</loc>
     <lastmod>2020-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zangwhe.cn/categories/Python/</loc>
+    <loc>https://zangwhe.cn/categories/Kali/</loc>
     <lastmod>2020-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

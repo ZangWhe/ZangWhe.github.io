@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/20d45627f1c3002aac15680fdf93640c.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/7d8b363c096b8a773b7fa374d7fcfc7f.png" color="#222">
+  <meta name="baidu-site-verification" content="code-4QswtKCLwA">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zangwhe.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#4169E1","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言&amp;emsp;这篇文章主要学习如何根据GridSpec和一些其他的函数实现自定义图形布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-Matplotlib-GridSpec等自定义图形布局">
+<meta property="og:url" content="https://zangwhe.cn/59195.html">
+<meta property="og:site_name" content="北方向北">
+<meta property="og:description" content="前言&amp;emsp;这篇文章主要学习如何根据GridSpec和一些其他的函数实现自定义图形布局">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/a84efe42f06c675b465982ed43f3c331.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/c8cfe4f0d45137f5ed014a638a7a928f.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/1771e7f2c924222450b23f0d99d3d6de.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/03e448d6ea58673cb436c7f295203f59.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/41445b35cc1d0c8b71c98c482ba277cb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/b918ee705c15a77a63e27fdc6b63fc80.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/fd722ff151b1ec23501358966706ccfa.png">
+<meta property="article:published_time" content="2020-11-25T12:10:44.000Z">
+<meta property="article:modified_time" content="2020-11-25T14:25:16.788Z">
+<meta property="article:author" content="WangzzZ">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Matplotlib">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/a84efe42f06c675b465982ed43f3c331.png">
+
+<link rel="canonical" href="https://zangwhe.cn/59195.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Python-Matplotlib-GridSpec等自定义图形布局 | 北方向北</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?AxiJGZhPJb77kgs2";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">北方向北</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zangwhe.cn/59195.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
+      <meta itemprop="name" content="WangzzZ">
+      <meta itemprop="description" content="世上还赞颂沉默吗<br>不够爆炸">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="北方向北">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python-Matplotlib-GridSpec等自定义图形布局
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-25 20:10:44 / 修改时间：22:25:16" itemprop="dateCreated datePublished" datetime="2020-11-25T20:10:44+08:00">2020-11-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/59195.html" class="post-meta-item leancloud_visitors" data-flag-title="Python-Matplotlib-GridSpec等自定义图形布局" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/59195.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/59195.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+          
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;这篇文章主要学习如何根据GridSpec和一些其他的函数实现自定义图形布局</p>
+<a id="more"></a>
+
+<h2 id="使用GridSpec和其他函数自定义图形布局"><a href="#使用GridSpec和其他函数自定义图形布局" class="headerlink" title="使用GridSpec和其他函数自定义图形布局"></a>使用GridSpec和其他函数自定义图形布局</h2><p>&emsp; 以下函数或方法实现创建axes上的网格的组合</p>
+<ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>subplots()</code></a> </li>
+</ul>
+<p>&emsp; 或许是创建figures和axes最主要的方式，与 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" target="_blank" rel="noopener"><code>matplotlib.pyplot.subplot()</code></a> 类似，<br>但是同时创建并放置图形上的所有轴。更多详情请看<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.subplots" target="_blank" rel="noopener"><code>matplotlib.figure.Figure.subplots</code></a>.</p>
+<ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener"><code>GridSpec</code></a></li>
+</ul>
+<p>&emsp; 指定将放置子图的网格的几何形状。</p>
+<p>&emsp; 需要设置网格的行数和列数。以及子图的布局参数可以调整</p>
+<ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.SubplotSpec.html#matplotlib.gridspec.SubplotSpec" target="_blank" rel="noopener"><code>SubplotSpec</code></a></li>
+</ul>
+<p>&emsp; 在给定的GridSpec上指定子图的位置</p>
+<ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html#matplotlib.pyplot.subplot2grid" target="_blank" rel="noopener"><code>subplot2grid()</code></a></li>
+</ul>
+<p>&emsp; 一个类似于<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" target="_blank" rel="noopener"><code>subplot()</code></a> 的辅助函数，但是使用基于0的索引并让subplot占用多个单元格。本文章没有介绍该函数。</p>
+<hr>
+<h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<h3 id="快速入门指南"><a href="#快速入门指南" class="headerlink" title="快速入门指南"></a>快速入门指南</h3><blockquote>
+<p>使用<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>subplots()</code></a>非常简单。它返回一个<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" target="_blank" rel="noopener"><code>Figure</code></a>实例和一个<a href="https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" target="_blank" rel="noopener"><code>Axes</code></a>对象数组 。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig1,f1_axes = plt.subplots(ncols=<span class="number">2</span>,nrows=<span class="number">2</span>,constrained_layout=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/a84efe42f06c675b465982ed43f3c331.png" style="zoom:80%;margin-left:10px" />
+
+<br>
+
+<blockquote>
+<p>对于像上面这样的简单用例，<a href="https://matplotlib.org/api/gridspec_api.html#module-matplotlib.gridspec" target="_blank" rel="noopener"><code>gridspec</code></a>可能过于冗长。</p>
+<p>你必须分别创建图形和<a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener"><code>GridSpec</code></a> 实例，然后将gridspec实例的元素传递给 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot" target="_blank" rel="noopener"><code>add_subplot()</code></a> 函数来创建axes对象。</p>
+<p>gridspec元素的访问方式通常与numpy数组相同。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig2 = plt.figure(constrained_layout=<span class="literal">True</span>)</span><br><span class="line">spec2 = gridspec.GridSpec(ncols=<span class="number">2</span>,nrows=<span class="number">2</span>,figure=fig2)</span><br><span class="line">f2_ax1 = fig2.add_subplot(spec2[<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line">f2_ax2 = fig2.add_subplot(spec2[<span class="number">0</span>,<span class="number">1</span>])</span><br><span class="line">f2_ax3 = fig2.add_subplot(spec2[<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line">f2_ax4 = fig2.add_subplot(spec2[<span class="number">1</span>,<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/c8cfe4f0d45137f5ed014a638a7a928f.png" style="zoom:80%;margin-left:10px" />
+
+<p>可以看出和subplots()方式结果相同</p>
+<p><strong>gridspec的强大之处在于能够创建跨越行和列的子图</strong>。注意，<a href="https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html" target="_blank" rel="noopener">NumPy slice Syntax</a> 用于选择每个子图将占据的gridspec部分。</p>
+<p>请注意，我们还使用了便捷方法<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_gridspec" target="_blank" rel="noopener"><code>Figure.add_gridspec</code></a> 代替<a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener"><code>gridspec.GridSpec</code></a>，有可能为用户节省了导入时间，并使名称空间更整洁。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fig3 = plt.figure(constrained_layout=<span class="literal">True</span>)</span><br><span class="line">gs = fig3.add_gridspec(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#关于切片可参考另一篇文章Numpy学习中的切片学习</span></span><br><span class="line">f3_ax1 = fig3.add_subplot(gs[<span class="number">0</span>,:])</span><br><span class="line">f3_ax1.set_title(<span class="string">'gs[0,:]'</span>)</span><br><span class="line">f3_ax1 = fig3.add_subplot(gs[<span class="number">1</span>,:<span class="number">-1</span>])</span><br><span class="line">f3_ax1.set_title(<span class="string">'gs[1,:-1]'</span>)</span><br><span class="line">f3_ax1 = fig3.add_subplot(gs[<span class="number">1</span>:,<span class="number">-1</span>])</span><br><span class="line">f3_ax1.set_title(<span class="string">'gs[1:,-1]'</span>)</span><br><span class="line">f3_ax1 = fig3.add_subplot(gs[<span class="number">-1</span>,<span class="number">0</span>])</span><br><span class="line">f3_ax1.set_title(<span class="string">'gs[-1,0]'</span>)</span><br><span class="line">f3_ax1 = fig3.add_subplot(gs[<span class="number">-1</span>,<span class="number">-2</span>])</span><br><span class="line">f3_ax1.set_title(<span class="string">'gs[-1,-2]'</span>)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/1771e7f2c924222450b23f0d99d3d6de.png" style="zoom:80%;margin-left:10px" />
+
+<blockquote>
+<p>接下来展示的方法与上面的方法类似，</p>
+<p>初始化统一的网格规范，然后使用numpy索引和切片为给定的子图分配多个“单元格”。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fig4 = plt.figure(constrained_layout=<span class="literal">True</span>)</span><br><span class="line">spec4 = fig4.add_gridspec(ncols=<span class="number">2</span>,nrows=<span class="number">2</span>)</span><br><span class="line">anno_opts = dict(xy=(<span class="number">0.5</span>,<span class="number">0.5</span>),xycoords=<span class="string">'axes fraction'</span>,va=<span class="string">'center'</span>,ha=<span class="string">'center'</span>)</span><br><span class="line"></span><br><span class="line">f4_ax1 = fig4.add_subplot(spec4[<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line">f4_ax1.annotate(<span class="string">'GridSpec[0,0]'</span>,**anno_opts)</span><br><span class="line">fig4.add_subplot(spec4[<span class="number">0</span>, <span class="number">1</span>]).annotate(<span class="string">'GridSpec[0, 1:]'</span>, **anno_opts)</span><br><span class="line">fig4.add_subplot(spec4[<span class="number">1</span>, <span class="number">0</span>]).annotate(<span class="string">'GridSpec[1:, 0]'</span>, **anno_opts)</span><br><span class="line">fig4.add_subplot(spec4[<span class="number">1</span>, <span class="number">1</span>]).annotate(<span class="string">'GridSpec[1:, 1:]'</span>, **anno_opts)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/03e448d6ea58673cb436c7f295203f59.png" style="zoom:80%;margin-left:10px" />
+
+
+
+<blockquote>
+<p>&emsp; 另一个方式是使用width_ratios和height_ratios参数。这些关键字参数是数字列表。</p>
+<p>&emsp; 请注意，绝对值是没有意义的，只有它们的相对比率重要。这意味着width_ratio =[2, 4, 8]与width_ratio =[1, 2, 4]在同样宽的数字内相等。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fig5 = plt.figure(constrained_layout=<span class="literal">True</span>)</span><br><span class="line">widths = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">1.5</span>]</span><br><span class="line">heights = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>]</span><br><span class="line">spec5 = fig5.add_gridspec(ncols=<span class="number">3</span>,nrows=<span class="number">3</span>,width_ratios=widths,height_ratios=heights)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">        ax = fig5.add_subplot(spec5[row,col])</span><br><span class="line">        label = <span class="string">'Width: &#123;&#125;\nHeight: &#123;&#125;'</span>.format(widths[col],heights[row])</span><br><span class="line">        ax.annotate(label,(<span class="number">0.1</span>,<span class="number">0.5</span>),xycoords=<span class="string">'axes fraction'</span>,va=<span class="string">'center'</span>)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/41445b35cc1d0c8b71c98c482ba277cb.png" style="zoom:80%;margin-left:10px" />
+
+<blockquote>
+<p>&emsp;学习使用width_ratio和height_ratio特别有用，因为函数<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>subplots()</code></a>在gridspec_kw参数中接受它们。</p>
+<p>&emsp;为此，<a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener"><code>GridSpec</code></a> 接受的任何参数都可以通过gridspec_kw参数传递给<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" target="_blank" rel="noopener"><code>subplots()</code></a> 。</p>
+<p>&emsp;此示例在不直接使用gridspec实例的情况下重新创建前面的图。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gs_kw = dict(width_ratios=widths,height_ratios=heights)</span><br><span class="line">fig6,f6_axes = plt.subplots(ncols=<span class="number">3</span>,nrows=<span class="number">3</span>,constrained_layout=<span class="literal">True</span>,gridspec_kw=gs_kw)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> r,row <span class="keyword">in</span> enumerate(f6_axes):</span><br><span class="line">    <span class="keyword">for</span> c,ax <span class="keyword">in</span> enumerate(row):</span><br><span class="line">        label = <span class="string">'Width:&#123;&#125;\nHeight:&#123;&#125;'</span>.format(widths[c],heights[r])</span><br><span class="line">        ax.annotate(label,(<span class="number">0.1</span>,<span class="number">0.5</span>),xycoords=<span class="string">'axes fraction'</span>,va=<span class="string">'center'</span>)</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/b918ee705c15a77a63e27fdc6b63fc80.png" style="zoom:80%;margin-left:10px" />
+
+<blockquote>
+<p>subplots和get_gridspec方法可以组合使用，因为有时使用subplots创建大多数子图，然后删除其中一些并组合它们更方便。</p>
+<p>在这里，我们将最后一列中底部的两个轴组合起来创建一个布局。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fig7,f7_axs = plt.subplots(ncols=<span class="number">3</span>,nrows=<span class="number">3</span>)</span><br><span class="line">gs = f7_axs[<span class="number">1</span>,<span class="number">2</span>].get_gridspec()</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除[1,-1],[2,-1]的axes</span></span><br><span class="line"><span class="keyword">for</span> ax <span class="keyword">in</span> f7_axs[<span class="number">1</span>:,<span class="number">-1</span>]:</span><br><span class="line">    ax.remove()</span><br><span class="line">axbig = fig7.add_subplot(gs[<span class="number">1</span>:,<span class="number">-1</span>])    </span><br><span class="line">axbig.annotate(<span class="string">'Big Axes \nGridSpec[1:, -1]'</span>, (<span class="number">0.1</span>, <span class="number">0.5</span>),</span><br><span class="line">               xycoords=<span class="string">'axes fraction'</span>, va=<span class="string">'center'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#调整子图之间及其周围的填充。</span></span><br><span class="line">fig7.tight_layout()</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/fd722ff151b1ec23501358966706ccfa.png" style="zoom:80%;margin-left:10px" />
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>WangzzZ
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zangwhe.cn/59195.html" title="Python-Matplotlib-GridSpec等自定义图形布局">https://zangwhe.cn/59195.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Matplotlib/" rel="tag"># Matplotlib</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/20301.html" rel="prev" title="Python-Matplotlib-图片教程">
+      <i class="fa fa-chevron-left"></i> Python-Matplotlib-图片教程
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:12px;">-------------本文结束<i class="fa fa-angle-double-right"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用GridSpec和其他函数自定义图形布局"><span class="nav-number">2.</span> <span class="nav-text">使用GridSpec和其他函数自定义图形布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入"><span class="nav-number">2.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速入门指南"><span class="nav-number">2.2.</span> <span class="nav-text">快速入门指南</span></a></li></ol></li></ol></div>
+      </div>
+
+
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="WangzzZ"
+      src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/10/82686035617bbf991e9dc32e9ed031de.png">
+  <p class="site-author-name" itemprop="name">WangzzZ</p>
+  <div class="site-description" itemprop="description">世上还赞颂沉默吗<br>不够爆炸</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tranquilpleasant" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tranquilpleasant" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1914394232@qq.com" title="E-Mail → mailto:1914394232@qq.com" rel="noopener" target="_blank"><i class="fas fa-comment fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/wangz3859" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wangz3859" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/weixin_43916296" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43916296" rel="noopener" target="_blank"><i class="fab fa-codiepie fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://plushine.cn/" title="https:&#x2F;&#x2F;plushine.cn" rel="noopener" target="_blank">PluShine</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.iamzlt.com/" title="https:&#x2F;&#x2F;www.iamzlt.com" rel="noopener" target="_blank">ZLT</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://zghya.cn/" title="https:&#x2F;&#x2F;zghya.cn" rel="noopener" target="_blank">い醉梦ジ红尘</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.iamdqy.cn/" title="http:&#x2F;&#x2F;www.iamdqy.cn" rel="noopener" target="_blank">亲切的沙果</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+     
+    </div>
+    
+  </aside>
+
+  <div id="sidebar-dimmer"></div>
+  
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020-09 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WangzzZ</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">48k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">43 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+  
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'd65IthiefixLmMfTsNFjHtgj-MdYXbMMI',
+      appKey     : 'L4RR27PQHeT4rhN5HOgBxEED',
+      placeholder: "以上信息选填且输入的邮箱不会被公开",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+  
+
+  <script src="/live2d-widget/autoload.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
