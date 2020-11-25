@@ -146,3 +146,16 @@ live2d:
     height: 300
   mobile:
     show: true
+
+
+#流程图
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: # options used for `drawSVG`
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  
+#external_link: false #这个已经有了，修改即可
