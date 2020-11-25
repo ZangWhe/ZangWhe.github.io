@@ -11,6 +11,8 @@ tags:
 
 [`matplotlib.pyplot`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)是使matplotlib像MATLAB一样工作的函数的集合。每个`pyplot`功能都会对图形进行一些更改：例如，创建图形，在图形中创建绘图区域，在绘图区域中绘制一些线条，用标签装饰绘图等。
 
+<!--more-->
+
 > 使用pyplot生成可视化的效果非常快：
 
 ```python

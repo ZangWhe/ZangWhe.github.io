@@ -7,6 +7,10 @@ tags:
 
 ### 图片教程
 
+利用matplotlib处理图片
+
+<!--more-->
+
 #### 导入
 
 ```python
