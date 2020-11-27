@@ -1200,7 +1200,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffe9ff;
+  background: #fff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2623,4 +2623,18 @@ mjx-container + br {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+body {
+  background: url("https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/27/b4305c9040f76071552efcfe2430b98e.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 }

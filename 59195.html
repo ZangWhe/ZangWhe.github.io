@@ -35,8 +35,10 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/41445b35cc1d0c8b71c98c482ba277cb.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/b918ee705c15a77a63e27fdc6b63fc80.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/fd722ff151b1ec23501358966706ccfa.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/26/9af56c0dbbb846fa118121498dc6b478.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/26/d9c94e19a272e34c530f3ae846026b68.png">
 <meta property="article:published_time" content="2020-11-25T12:10:44.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:25:16.788Z">
+<meta property="article:modified_time" content="2020-11-26T10:55:55.052Z">
 <meta property="article:author" content="WangzzZ">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Matplotlib">
@@ -209,10 +211,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-11-25 20:10:44 / 修改时间：22:25:16" itemprop="dateCreated datePublished" datetime="2020-11-25T20:10:44+08:00">2020-11-25</time>
+              <time title="创建时间：2020-11-25 20:10:44" itemprop="dateCreated datePublished" datetime="2020-11-25T20:10:44+08:00">2020-11-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-26 18:55:55" itemprop="dateModified" datetime="2020-11-26T18:55:55+08:00">2020-11-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -250,14 +258,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.5k</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>4 分钟</span>
             </span>
 
           
@@ -359,6 +367,36 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fig7,f7_axs = plt.subplots(ncols=<span class="number">3</span>,nrows=<span class="number">3</span>)</span><br><span class="line">gs = f7_axs[<span class="number">1</span>,<span class="number">2</span>].get_gridspec()</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除[1,-1],[2,-1]的axes</span></span><br><span class="line"><span class="keyword">for</span> ax <span class="keyword">in</span> f7_axs[<span class="number">1</span>:,<span class="number">-1</span>]:</span><br><span class="line">    ax.remove()</span><br><span class="line">axbig = fig7.add_subplot(gs[<span class="number">1</span>:,<span class="number">-1</span>])    </span><br><span class="line">axbig.annotate(<span class="string">'Big Axes \nGridSpec[1:, -1]'</span>, (<span class="number">0.1</span>, <span class="number">0.5</span>),</span><br><span class="line">               xycoords=<span class="string">'axes fraction'</span>, va=<span class="string">'center'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#调整子图之间及其周围的填充。</span></span><br><span class="line">fig7.tight_layout()</span><br></pre></td></tr></table></figure>
 
 <img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/25/fd722ff151b1ec23501358966706ccfa.png" style="zoom:80%;margin-left:10px" />
+
+<br>
+
+<hr>
+<br>
+
+<h3 id="精细调整Gridspec布局"><a href="#精细调整Gridspec布局" class="headerlink" title="精细调整Gridspec布局"></a>精细调整Gridspec布局</h3><p>当显示地使用GridSpec时，可以通过改变gridspec的参数来调整子图的布局</p>
+<p>请注意，此选项与<code>constrained_layout</code>或者 <a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.tight_layout" target="_blank" rel="noopener"><code>Figure.tight_layout</code></a> 都不兼容，两者都通过调整子图大小以填充figure。</p>
+<p>参数请看：<a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener">matplotlib.gridspec.GridSpec</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fig8 = plt.figure(constrained_layout=<span class="literal">False</span>)</span><br><span class="line">gs1 = fig8.add_gridspec(nrows=<span class="number">3</span>,ncols=<span class="number">3</span>,left=<span class="number">0.05</span>,right=<span class="number">0.48</span>,wspace=<span class="number">0.05</span>)</span><br><span class="line">f8_ax1 = fig8.add_subplot(gs1[:<span class="number">-1</span>,:])</span><br><span class="line">f8_ax2 = fig8.add_subplot(gs1[<span class="number">-1</span>,:<span class="number">-1</span>])</span><br><span class="line">f8_ax3 = fig8.add_subplot(gs1[<span class="number">-1</span>,<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/26/9af56c0dbbb846fa118121498dc6b478.png" style="zoom:80%;margin-left:10px" />
+
+<br>
+
+<hr>
+<br>
+
+<h3 id="GridSpec之SubplotSpec"><a href="#GridSpec之SubplotSpec" class="headerlink" title="GridSpec之SubplotSpec"></a>GridSpec之SubplotSpec</h3><p>你可以通过<a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.SubplotSpec.html#matplotlib.gridspec.SubplotSpec" target="_blank" rel="noopener"><code>SubplotSpec</code></a> 创建GridSpec，在这种情况下，它的布局参数被设置为给定SubplotSpec的位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fig10 = plt.figure(constrained_layout=<span class="literal">False</span>)</span><br><span class="line">gs0 = fig10.add_gridspec(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">gs00 = gs0[<span class="number">0</span>].subgridspec(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">gs01 = gs0[<span class="number">1</span>].subgridspec(<span class="number">3</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">        fig10.add_subplot(gs00[i,j])</span><br><span class="line">        fig10.add_subplot(gs01[j,i])</span><br></pre></td></tr></table></figure>
+
+<img data-src="https://cdn.jsdelivr.net/gh/zangwhe/Image@main/2020/11/26/d9c94e19a272e34c530f3ae846026b68.png" style="zoom:80%;margin-left:10px" />
+
+<br>
+
+<hr>
+<br>
+
+<p>如果你发现文章中出现的错误或者有任何疑问欢迎在下方评论区留言</p>
+
     </div>
 
     
@@ -397,7 +435,10 @@
     <a href="/20301.html" rel="prev" title="Python-Matplotlib-图片教程">
       <i class="fa fa-chevron-left"></i> Python-Matplotlib-图片教程
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/5321.html" rel="next" title="2020-11-26-Python-Matplotlib-7">
+      2020-11-26-Python-Matplotlib-7 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -466,7 +507,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用GridSpec和其他函数自定义图形布局"><span class="nav-number">2.</span> <span class="nav-text">使用GridSpec和其他函数自定义图形布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入"><span class="nav-number">2.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速入门指南"><span class="nav-number">2.2.</span> <span class="nav-text">快速入门指南</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用GridSpec和其他函数自定义图形布局"><span class="nav-number">2.</span> <span class="nav-text">使用GridSpec和其他函数自定义图形布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入"><span class="nav-number">2.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速入门指南"><span class="nav-number">2.2.</span> <span class="nav-text">快速入门指南</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#精细调整Gridspec布局"><span class="nav-number">2.3.</span> <span class="nav-text">精细调整Gridspec布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GridSpec之SubplotSpec"><span class="nav-number">2.4.</span> <span class="nav-text">GridSpec之SubplotSpec</span></a></li></ol></li></ol></div>
       </div>
 
 
@@ -484,7 +525,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -574,7 +615,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">43 分钟</span>
+    <span title="站点阅读时长">44 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
